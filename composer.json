@@ -1,4 +1,16 @@
 {
+    "name": "selene/cms-bundle",
+    "type": "library",
+    "version": "0.0.0",
+    "description": "CMS platform for Symfony",
+    "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Marshall",
+            "homepage": "https://github.com/psion"
+        }
+    ],
     "require": {
         "php": ">=8.1",
         "ext-ctype": "*",
