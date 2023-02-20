@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog\Security;
+namespace Selene\CMSBundle\Security;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +15,7 @@ use Symfony\Component\Security\Http\Authenticator\Passport\Credentials\PasswordC
 use Symfony\Component\Security\Http\Authenticator\Passport\Passport;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
-class Selene\CMSBlogFormAuthenticator extends AbstractLoginFormAuthenticator
+class AppFormAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
 
