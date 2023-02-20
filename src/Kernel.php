@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog;
+namespace Selene\CMSBundle;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;

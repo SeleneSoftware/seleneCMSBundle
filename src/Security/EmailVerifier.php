@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog\Security;
+namespace Selene\CMSBundle\Security;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog\Interfaces;
+namespace Selene\CMSBundle\Interfaces;
 
 interface DatedEntityInterface
 {

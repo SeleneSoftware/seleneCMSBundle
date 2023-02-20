@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\CMSBlog\Repository;
+namespace Selene\CMSBundle\Repository;
 
-use Selene\CMSBlog\Entity\Settings;
+use Selene\CMSBundle\Entity\Settings;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

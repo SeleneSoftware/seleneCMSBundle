@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\CMSBlog\Controller\Admin;
+namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBlog\Entity\Settings;
+use Selene\CMSBundle\Entity\Settings;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;

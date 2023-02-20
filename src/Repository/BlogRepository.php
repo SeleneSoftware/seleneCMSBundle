@@ -1,9 +1,9 @@
 <?php
 
-namespace Selene\CMSBlog\Repository;
+namespace Selene\CMSBundle\Repository;
 
-use Selene\CMSBlog\Entity\Blog;
-use Selene\CMSBlog\Traits\RepositorySlugTrait;
+use Selene\CMSBundle\Entity\Blog;
+use Selene\CMSBundle\Traits\RepositorySlugTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

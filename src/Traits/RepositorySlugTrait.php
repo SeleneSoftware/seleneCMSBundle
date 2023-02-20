@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog\Traits;
+namespace Selene\CMSBundle\Traits;
 
 trait RepositorySlugTrait
 {

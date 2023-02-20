@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\CMSBlog\EventSubscriber;
+namespace Selene\CMSBundle\EventSubscriber;
 
-use Selene\CMSBlog\Interfaces\DatedEntityInterface;
+use Selene\CMSBundle\Interfaces\DatedEntityInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

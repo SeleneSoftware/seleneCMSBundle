@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\CMSBlog\Handlers;
+namespace Selene\CMSBundle\Handlers;
 
-use Selene\CMSBlog\Entity\Settings;
+use Selene\CMSBundle\Entity\Settings;
 use Doctrine\Persistence\ManagerRegistry;
 
 class SettingsHandler

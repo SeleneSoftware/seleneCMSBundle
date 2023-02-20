@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\CMSBlog\Traits;
+namespace Selene\CMSBundle\Traits;
 
-use Selene\CMSBlog\Entity\Blog;
+use Selene\CMSBundle\Entity\Blog;
 use Doctrine\Persistence\ManagerRegistry;
 
 trait BlogSideBarTrait

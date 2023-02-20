@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog\Controller;
+namespace Selene\CMSBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

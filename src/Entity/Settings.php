@@ -1,9 +1,9 @@
 <?php
 
-namespace Selene\CMSBlog\Entity;
+namespace Selene\CMSBundle\Entity;
 
-use Selene\CMSBlog\Interfaces\BoolEntityInterface;
-use Selene\CMSBlog\Repository\SettingsRepository;
+use Selene\CMSBundle\Interfaces\BoolEntityInterface;
+use Selene\CMSBundle\Repository\SettingsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SettingsRepository::class)]

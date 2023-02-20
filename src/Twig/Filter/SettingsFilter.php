@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBlog\Twig\Filter;
+namespace Selene\CMSBundle\Twig\Filter;
 
 use Doctrine\Persistence\ManagerRegistry;
 use Twig\Extension\RuntimeExtensionInterface;

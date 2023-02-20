@@ -1,11 +1,11 @@
 <?php
 
-namespace Selene\CMSBlog\Controller\Admin;
+namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBlog\Entity\Blog;
-use Selene\CMSBlog\Entity\Content;
-use Selene\CMSBlog\Entity\Settings;
-use Selene\CMSBlog\Entity\User;
+use Selene\CMSBundle\Entity\Blog;
+use Selene\CMSBundle\Entity\Content;
+use Selene\CMSBundle\Entity\Settings;
+use Selene\CMSBundle\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
