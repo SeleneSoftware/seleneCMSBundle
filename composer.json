@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "selene\\CMSBundle\\": "src/"
+            "Selene\\CMSBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "selene\\CMSBundle\\Tests\\": "tests/"
+            "Selene\\CMSBundle\\Tests\\": "tests/"
         }
     },
     "config": {
