@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\Repository;
+namespace Selene\CMSBlog\Repository;
 
-use Selene\Entity\User;
+use Selene\CMSBlog\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;

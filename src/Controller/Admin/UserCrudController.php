@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\Controller\Admin;
+namespace Selene\CMSBlog\Controller\Admin;
 
-use Selene\Entity\User;
+use Selene\CMSBlog\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;

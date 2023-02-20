@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\Traits;
+namespace Selene\CMSBlog\Traits;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;

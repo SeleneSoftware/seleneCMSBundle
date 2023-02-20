@@ -1,9 +1,9 @@
 <?php
 
-namespace Selene\Twig;
+namespace Selene\CMSBlog\Twig;
 
-use Selene\Handlers\SettingsHandler;
-use Selene\Twig\Filter\ContentFilter;
+use Selene\CMSBlog\Handlers\SettingsHandler;
+use Selene\CMSBlog\Twig\Filter\ContentFilter;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;

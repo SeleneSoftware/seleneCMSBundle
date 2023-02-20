@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\Controller;
+namespace Selene\CMSBlog\Controller;
 
-use Selene\Traits\BlogSideBarTrait;
+use Selene\CMSBlog\Traits\BlogSideBarTrait;
 use Doctrine\Persistence\ManagerRegistry;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

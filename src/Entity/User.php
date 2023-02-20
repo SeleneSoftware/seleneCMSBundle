@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\Entity;
+namespace Selene\CMSBlog\Entity;
 
-use Selene\Repository\UserRepository;
+use Selene\CMSBlog\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

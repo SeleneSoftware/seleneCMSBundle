@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\Controller\Admin;
+namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\Entity\Blog;
+use Selene\CMSBundle\Entity\Blog;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field;
 

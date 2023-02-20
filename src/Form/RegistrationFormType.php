@@ -1,8 +1,8 @@
 <?php
 
-namespace Selene\Form;
+namespace Selene\CMSBlog\Form;
 
-use Selene\Entity\User;
+use Selene\CMSBlog\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
