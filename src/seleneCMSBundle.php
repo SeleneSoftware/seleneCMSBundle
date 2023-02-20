@@ -1,3 +1,5 @@
+<?php
+
 namespace Selene\CMSBundle;
 
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
