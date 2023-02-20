@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Entity;
+namespace Selene\Entity;
 
-use App\Interfaces\DatedEntityInterface;
-use App\Repository\BlogRepository;
-use App\Traits\EntityDate;
+use Selene\Interfaces\DatedEntityInterface;
+use Selene\Repository\BlogRepository;
+use Selene\Traits\EntityDate;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

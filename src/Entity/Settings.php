@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Entity;
+namespace Selene\Entity;
 
-use App\Interfaces\BoolEntityInterface;
-use App\Repository\SettingsRepository;
+use Selene\Interfaces\BoolEntityInterface;
+use Selene\Repository\SettingsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SettingsRepository::class)]

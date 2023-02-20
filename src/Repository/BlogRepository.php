@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repository;
+namespace Selene\Repository;
 
-use App\Entity\Blog;
-use App\Traits\RepositorySlugTrait;
+use Selene\Entity\Blog;
+use Selene\Traits\RepositorySlugTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

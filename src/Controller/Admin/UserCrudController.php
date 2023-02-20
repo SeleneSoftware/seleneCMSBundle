@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace Selene\Controller\Admin;
 
-use App\Entity\User;
+use Selene\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;

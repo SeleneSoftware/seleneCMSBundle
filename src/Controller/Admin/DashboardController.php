@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace Selene\Controller\Admin;
 
-use App\Entity\Blog;
-use App\Entity\Content;
-use App\Entity\Settings;
-use App\Entity\User;
+use Selene\Entity\Blog;
+use Selene\Entity\Content;
+use Selene\Entity\Settings;
+use Selene\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;

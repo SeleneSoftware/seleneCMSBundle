@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace Selene\Controller;
 
-use App\Entity\Blog;
-use App\Traits\BlogSideBarTrait;
+use Selene\Entity\Blog;
+use Selene\Traits\BlogSideBarTrait;
 use Doctrine\Persistence\ManagerRegistry;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

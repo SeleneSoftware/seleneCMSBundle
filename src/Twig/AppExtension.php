@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Twig;
+namespace Selene\Twig;
 
-use App\Handlers\SettingsHandler;
-use App\Twig\Filter\ContentFilter;
+use Selene\Handlers\SettingsHandler;
+use Selene\Twig\Filter\ContentFilter;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;

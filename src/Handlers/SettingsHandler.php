@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Handlers;
+namespace Selene\Handlers;
 
-use App\Entity\Settings;
+use Selene\Entity\Settings;
 use Doctrine\Persistence\ManagerRegistry;
 
 class SettingsHandler

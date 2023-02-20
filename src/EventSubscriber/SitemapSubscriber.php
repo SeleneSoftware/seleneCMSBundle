@@ -1,8 +1,8 @@
 <?php
 
-namespace App\EventSubscriber;
+namespace Selene\EventSubscriber;
 
-use App\Repository\BlogRepository;
+use Selene\Repository\BlogRepository;
 use Presta\SitemapBundle\Event\SitemapPopulateEvent;
 use Presta\SitemapBundle\Service\UrlContainerInterface;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;

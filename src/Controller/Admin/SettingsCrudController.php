@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace Selene\Controller\Admin;
 
-use App\Entity\Settings;
+use Selene\Entity\Settings;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;

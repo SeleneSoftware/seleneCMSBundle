@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Interfaces;
+namespace Selene\Interfaces;
 
 interface BoolEntityInterface
 {

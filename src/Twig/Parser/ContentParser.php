@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Twig\Parser;
+namespace Selene\Twig\Parser;
 
 class ContentParser extends \Twig\TokenParser\AbstractTokenParser
 {

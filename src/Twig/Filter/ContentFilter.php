@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Twig\Filter;
+namespace Selene\Twig\Filter;
 
-use App\Entity\Content;
+use Selene\Entity\Content;
 use Doctrine\Persistence\ManagerRegistry;
 use Twig\Extension\RuntimeExtensionInterface;
 

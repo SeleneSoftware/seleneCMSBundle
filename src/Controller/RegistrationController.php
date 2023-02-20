@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller;
+namespace Selene\Controller;
 
-use App\Entity\User;
-use App\Form\RegistrationFormType;
-use App\Security\AppFormAuthenticator;
+use Selene\Entity\User;
+use Selene\Form\RegistrationFormType;
+use Selene\Security\SeleneFormAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,7 +17,7 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
-// use App\Security\EmailVerifier;
+// use Selene\Security\EmailVerifier;
 
 class RegistrationController extends AbstractController
 {
@@ -30,7 +30,7 @@ class RegistrationController extends AbstractController
     // }
 
     #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppFormAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, SeleneFormAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);

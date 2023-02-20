@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace Selene\Traits;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;

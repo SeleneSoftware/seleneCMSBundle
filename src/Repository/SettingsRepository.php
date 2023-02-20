@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace Selene\Repository;
 
-use App\Entity\Settings;
+use Selene\Entity\Settings;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

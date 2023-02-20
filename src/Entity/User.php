@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entity;
+namespace Selene\Entity;
 
-use App\Repository\UserRepository;
+use Selene\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

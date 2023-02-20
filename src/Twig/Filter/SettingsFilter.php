@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Twig\Filter;
+namespace Selene\Twig\Filter;
 
 use Doctrine\Persistence\ManagerRegistry;
 use Twig\Extension\RuntimeExtensionInterface;

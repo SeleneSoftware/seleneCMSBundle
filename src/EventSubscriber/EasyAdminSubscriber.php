@@ -1,8 +1,8 @@
 <?php
 
-namespace App\EventSubscriber;
+namespace Selene\EventSubscriber;
 
-use App\Interfaces\DatedEntityInterface;
+use Selene\Interfaces\DatedEntityInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
