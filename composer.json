@@ -1,6 +1,6 @@
 {
     "name": "selene/cms-bundle",
-    "type": "library",
+    "type": "symfony-bundle",
     "version": "0.0.0",
     "description": "CMS platform for Symfony",
     "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
