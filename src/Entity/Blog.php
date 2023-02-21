@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\CMSBundle\CMSBundle\Entity;
+namespace Selene\CMSBundle\Entity;
 
 use Selene\CMSBundle\Interfaces\DatedEntityInterface;
 use Selene\CMSBundle\Repository\BlogRepository;
