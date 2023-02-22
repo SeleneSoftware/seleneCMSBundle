@@ -25,7 +25,8 @@
         "easycorp/easyadmin-bundle": "^4.4",
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^3.3",
-        "symfony/framework-bundle": "6.2.*"
+        "symfony/framework-bundle": "6.2.*",
+        "symfony/orm-pack": "^2.3"
     },
     "autoload": {
         "psr-4": {
