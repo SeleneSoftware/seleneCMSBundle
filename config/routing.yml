@@ -1,0 +1,7 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: Selene\CMSBundle\Controller
+    type: attribute
+
+

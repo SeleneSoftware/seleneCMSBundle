@@ -11,13 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-    use BlogSideBarTrait;
+    // use BlogSideBarTrait;
 
     #[Route('/', name: 'default', options: ['sitemap' => ['priority' => 0.7, 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]])]
     public function index(ManagerRegistry $doctrine): Response
     {
         return $this->render('default/index.html.twig', [
-            'blogs' => $this->getBlogList($doctrine),
+            // 'blogs' => $this->getBlogList($doctrine),
         ]);
     }
 }
