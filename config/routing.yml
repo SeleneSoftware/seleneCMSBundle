@@ -1,7 +1,4 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: Selene\CMSBundle\Controller
-    type: attribute
-
-
+blog_list:
+  path: /blog
+            # the controller value has the format 'controller_class::method_name'
+      controller: Selene\CMSBundle\BlogController::list
