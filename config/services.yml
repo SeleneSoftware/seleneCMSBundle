@@ -17,8 +17,10 @@ services:
 
     Selene\CMSBundle\:
         resource: '../src/'
-        exclude: '../../{vendor}'
 
     Selene\CMSBundle\Controller\:
         resource: '../src/Controller/*'
+        public: true
+    Selene\CMSBundle\Repository\:
+        resource: '../src/Repository/*'
         public: true
