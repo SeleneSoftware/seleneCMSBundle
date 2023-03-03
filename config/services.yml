@@ -1,3 +1,24 @@
-selene_cms_bundle:
-    title: Selene CMS Bundle
+parameters:
 
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+    bind:
+        # $cookieConsentTheme: '%ch_cookie_consent.theme%'
+        # $cookieCategories: '%ch_cookie_consent.categories%'
+        # $useLogger: '%ch_cookie_consent.use_logger%'
+        # $cookieConsentPosition: '%ch_cookie_consent.position%'
+        # $cookieConsentSimplified: '%ch_cookie_consent.simplified%'
+        # $httpOnly: '%ch_cookie_consent.http_only%'
+        # $formAction: '%ch_cookie_consent.form_action%'
+        # $csrfProtection: '%ch_cookie_consent.csrf_protection%'
+
+    Selene\CMSBundle\:
+        resource: '../src/'
+        exclude: '../../{vendor}'
+
+    Selene\CMSBundle\Controller\:
+        resource: '../src/Controller/*'
+        public: true
