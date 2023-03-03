@@ -1,3 +1,3 @@
 blog:
   path: /blog
-  controller: Selene\CMSBundle\BlogController::list
+  controller: Selene\CMSBundle\BlogController::index
