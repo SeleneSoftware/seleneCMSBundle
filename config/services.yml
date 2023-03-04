@@ -23,5 +23,5 @@ services:
         public: true
     Selene\CMSBundle\Repository\:
         resource: '../src/Repository/*'
-        tags: ['doctrine.repository_service']
+        # tags: ['doctrine.repository_service']
         public: true

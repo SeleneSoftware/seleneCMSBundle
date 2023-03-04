@@ -14,7 +14,7 @@ class BlogController extends AbstractController
 {
     use BlogSideBarTrait;
 
-    #[Route('/blog', name: 'blog', options: ['sitemap' => ['priority' => 0.7, 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]])]
+    #[Route('/blog', name: 'selene_cms_blog', options: ['sitemap' => ['priority' => 0.7, 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]])]
     public function index(ManagerRegistry $doctrine): Response
     {
         return $this->render('blog/index.html.twig', [
@@ -22,7 +22,7 @@ class BlogController extends AbstractController
         ]);
     }
 
-    #[Route('/blog/{slug}', name: 'blog_post')]
+    #[Route('/blog/{slug}', name: 'selene_cms_blog_post')]
     public function article(#[MapEntity(mapping: ['slug' => 'slug'])] Blog $blog, ManagerRegistry $doctrine): Response
     {
         if (new \DateTime() > $blog->getDatePublished()) {
@@ -31,7 +31,7 @@ class BlogController extends AbstractController
             'blog' => $blog,
         ]);
         } else {
-            return $this->redirectToRoute('blog');
+            return $this->redirectToRoute('selene_cms_blog');
         }
     }
 }
