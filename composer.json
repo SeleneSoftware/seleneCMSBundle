@@ -1,14 +1,14 @@
 {
     "name": "selene/cms-bundle",
     "type": "symfony-bundle",
-    "version": "0.0.0",
+    "version": "0.0.1,
     "description": "CMS platform for Symfony",
     "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jason Marshall",
-            "homepage": "https://github.com/psion"
+            "name": "Jason Marshall - JasonMarshallSelene@gmail.com",
+            "homepage": "https://github.com/SeleneSoftware"
         }
     ],
     "require": {
@@ -26,6 +26,7 @@
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^3.3",
         "symfony/framework-bundle": "6.2.*",
+        "symfony/http-kernel": "6.2.*",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.12",
