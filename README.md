@@ -5,7 +5,7 @@ This is a bundle for the [Symfony](https://www.symfony.com) Web Framework.  As s
 This bundle enables CMS functionality on a Symfony site.  This requires a few instalation steps, hopefully the Symfony Flex took care of them, but here are the steps.
 
 If you are using Symfony Flex, as you should be, just run this composer command in your project:
-```bash composer require selene/cms-bundle```
+```bash composer require selenesoftware/cms-bundle```
 The Recipe will install the necessary Controllers and configurations so that you can just get started.
 
 If you aren't using Flex, you will need to add the following line:
