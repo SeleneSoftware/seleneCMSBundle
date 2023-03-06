@@ -16,7 +16,7 @@ services:
         # $csrfProtection: '%ch_cookie_consent.csrf_protection%'
 
     Selene\CMSBundle\:
-        resource: '../src/'
+        resource: '../src/*'
 
     Selene\CMSBundle\Controller\:
         resource: '../src/Controller/*'
