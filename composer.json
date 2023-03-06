@@ -1,5 +1,5 @@
 {
-    "name": "selene/cms-bundle",
+    "name": "selenesoftware/cms-bundle",
     "type": "symfony-bundle",
     "version": "0.0.1",
     "description": "CMS platform for Symfony",
