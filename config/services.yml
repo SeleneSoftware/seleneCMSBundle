@@ -5,7 +5,7 @@ services:
         autowire: true
         autoconfigure: true
         public: false
-    bind:
+    # bind:
         # $cookieConsentTheme: '%ch_cookie_consent.theme%'
         # $cookieCategories: '%ch_cookie_consent.categories%'
         # $useLogger: '%ch_cookie_consent.use_logger%'
