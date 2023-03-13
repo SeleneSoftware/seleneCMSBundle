@@ -78,6 +78,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 When creating a new feature branch, run a ```composer update````` and a  `````npm update````` and commit those changes first.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/) ````
-````
-````
+[MIT](https://choosealicense.com/licenses/mit/) 
