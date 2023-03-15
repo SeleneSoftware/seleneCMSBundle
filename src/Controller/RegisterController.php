@@ -19,7 +19,7 @@ use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 // use Selene\CMSBundle\Security\EmailVerifier;
 
-class RegistrationController extends AbstractController
+class RegisterController extends AbstractController
 {
     // Until we can get a mailer setup, this does not need to be setup.
     // private EmailVerifier $emailVerifier;
