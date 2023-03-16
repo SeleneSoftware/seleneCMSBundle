@@ -29,8 +29,8 @@ class RegisterController extends AbstractController
     //     $this->emailVerifier = $emailVerifier;
     // }
 
-    #[Route('/register', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, Selene\CMSBundleFormAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
+    #[Route('/register', name: 'selene_cms_register')]
+    public function seleneRegister(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppFormAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
