@@ -4,7 +4,7 @@ namespace Selene\CMSBundle\Controller;
 
 use Selene\CMSBundle\Entity\User;
 use Selene\CMSBundle\Form\RegistrationFormType;
-use Selene\CMSBundle\Security\Selene\AppFormAuthenticator;
+use Selene\CMSBundle\Security\AppFormAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
