@@ -3,7 +3,7 @@
 namespace Selene\CMSBundle\Controller;
 
 use Selene\CMSBundle\Entity\Blog;
-use Selene\CMSBundle\Traits\BlogSideBarTrait;
+use Selene\CMSBundle\Traits\BlogTrait;
 use Doctrine\Persistence\ManagerRegistry;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
-    use BlogSideBarTrait;
+    use BlogTrait;
 
     #[Route('/blog', name: 'selene_cms_blog', options: ['sitemap' => ['priority' => 0.7, 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]])]
     public function blogList(ManagerRegistry $doctrine): Response
@@ -27,7 +27,7 @@ class BlogController extends AbstractController
     {
         if (new \DateTime() > $blog->getDatePublished()) {
             return $this->render('blog/post.html.twig', [
-            'blogs' => $this->getBlogList($doctrine),
+            'blogs' => $this->getBlogList($doctrine, 3),
             'blog' => $blog,
         ]);
         } else {
