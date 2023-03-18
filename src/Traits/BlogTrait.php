@@ -12,10 +12,11 @@ trait BlogTrait
         $loop = 0;
         foreach ($blogs = $doctrine->getRepository(Blog::class)->findAll() as $k => $b) {
             // Don't show private entires
-            if ($b->getPrivate()) {
-                unset($blogs[$k]);
-                continue;
-            }
+            // Not yet, either
+            // if ($b->getPrivate()) {
+            //     unset($blogs[$k]);
+            //     continue;
+            // }
             // If we only need a few of them, only show a few of them.  Default is all
             if ($entries) {
                 if ($loop <= $entries) {
