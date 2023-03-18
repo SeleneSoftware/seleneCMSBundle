@@ -2,8 +2,8 @@
 
 namespace Selene\CMSBundle\Traits;
 
-use Selene\CMSBundle\Entity\Blog;
 use Doctrine\Persistence\ManagerRegistry;
+use Selene\CMSBundle\Entity\Blog;
 
 trait BlogTrait
 {
@@ -17,13 +17,6 @@ trait BlogTrait
             //     unset($blogs[$k]);
             //     continue;
             // }
-            // If we only need a few of them, only show a few of them.  Default is all
-            if ($entries) {
-                if ($loop <= $entries) {
-                    break;
-                }
-                $loop++;
-            }
 
             // Don't show any that are to be published in the future
             if (new \DateTime() < $b->getDatePublished()) {
@@ -31,6 +24,11 @@ trait BlogTrait
             }
         }
 
-        return array_reverse($blogs);
+        // If we only need a few of them, only show a few of them.  Default is all
+        if ($entries) {
+            return array_slice($blogs, 0, $entries);
+        }
+
+        return $blogs;
     }
 }
