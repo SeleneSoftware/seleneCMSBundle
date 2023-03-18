@@ -11,13 +11,6 @@ trait BlogTrait
     {
         $loop = 0;
         foreach ($blogs = $doctrine->getRepository(Blog::class)->findAll() as $k => $b) {
-            // Don't show private entires
-            // Not yet, either
-            // if ($b->getPrivate()) {
-            //     unset($blogs[$k]);
-            //     continue;
-            // }
-
             // Don't show any that are to be published in the future
             if (new \DateTime() < $b->getDatePublished()) {
                 unset($blogs[$k]);
