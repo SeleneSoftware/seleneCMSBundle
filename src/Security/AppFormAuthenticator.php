@@ -19,7 +19,7 @@ class AppFormAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
 
-    public const LOGIN_ROUTE = 'app_login';
+    public const LOGIN_ROUTE = 'selene_cms_login';
 
     private UrlGeneratorInterface $urlGenerator;
 
@@ -50,7 +50,7 @@ class AppFormAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         // For example:
-        return new RedirectResponse($this->urlGenerator->generate('admin'));
+        return new RedirectResponse($this->urlGenerator->generate('selene_cms_admin'));
     }
 
     protected function getLoginUrl(Request $request): string
