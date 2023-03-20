@@ -53,3 +53,4 @@
 
 .sw*
 .php-cs-fixer.cache
+composer.lock
