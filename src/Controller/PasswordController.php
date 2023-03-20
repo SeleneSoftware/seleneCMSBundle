@@ -59,7 +59,7 @@ class PasswordController extends AbstractController
     /**
      * Confirmation page after a user has requested a password reset.
      */
-    #[Route('/check-email', name: 'selene_cms_check_email')]
+    #[Route('/reset-password/check-email', name: 'selene_cms_check_email')]
     public function checkEmail(): Response
     {
         // Generate a fake token if the user does not exist or someone hit this page directly.
@@ -76,7 +76,7 @@ class PasswordController extends AbstractController
     /**
      * Validates and process the reset URL that the user clicked in their email.
      */
-    #[Route('/reset/{token}', name: 'selene_cms_reset_password')]
+    #[Route('/reset-password/reset/{token}', name: 'selene_cms_reset_password')]
     public function reset(Request $request, UserPasswordHasherInterface $passwordHasher, TranslatorInterface $translator, string $token = null): Response
     {
         if ($token) {
