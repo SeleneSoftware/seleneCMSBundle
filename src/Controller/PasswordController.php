@@ -20,7 +20,6 @@ use SymfonyCasts\Bundle\ResetPassword\Controller\ResetPasswordControllerTrait;
 use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface;
 
-#[Route('/reset-password')]
 class PasswordController extends AbstractController
 {
     use ResetPasswordControllerTrait;
@@ -38,7 +37,7 @@ class PasswordController extends AbstractController
     /**
      * Display & process form to request a password reset.
      */
-    #[Route('', name: 'selene_cms_forgot_password_request')]
+    #[Route('/reset-password', name: 'selene_cms_forgot_password_request')]
     public function request(Request $request, MailerInterface $mailer, TranslatorInterface $translator): Response
     {
         $form = $this->createForm(ResetPasswordRequestFormType::class);
