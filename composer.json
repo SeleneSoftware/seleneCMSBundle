@@ -31,7 +31,8 @@
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.12",
         "symfony/orm-pack": "^2.3",
-        "symfonycasts/reset-password-bundle": "^1.17"
+        "symfonycasts/reset-password-bundle": "^1.17",
+        "symfony/ux-twig-component": "^2.7"
     },
     "autoload": {
         "psr-4": {
