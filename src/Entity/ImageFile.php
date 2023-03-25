@@ -4,9 +4,10 @@ namespace Selene\CMSBundle\Entity;
 
 use Selene\CMSBundle\Repository\ImageFileRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Selene\CMSBundle\Interfaces\ImageFileInterface;
 
 #[ORM\Entity(repositoryClass: ImageFileRepository::class)]
-class ImageFile
+class ImageFile implements ImageFileInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
