@@ -5,6 +5,7 @@ namespace Selene\CMSBundle\Entity;
 use Selene\CMSBundle\Repository\ImageFileRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Interfaces\ImageEntityInterface;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: ImageFileRepository::class)]
 class ImageFile implements ImageEntityInterface
