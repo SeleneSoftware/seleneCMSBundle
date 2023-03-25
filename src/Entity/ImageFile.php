@@ -15,64 +15,33 @@ class ImageFile implements ImageEntityInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $filename = null;
+    private ?string $name = null;
 
-    private ?string $tempFilename = null;
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $description = null;
 
+    #[ORM\Column(length: 255)]
     private ?string $file = null;
-
-    private ?string $webView = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getFilename(): ?string
+    public function getName(): ?string
     {
-        return $this->filename;
+        return $this->name;
     }
 
-    public function setFilename(string $filename): self
+    public function setName(string $name): self
     {
-        $this->filename = $filename;
+        $this->name = $name;
 
         return $this;
     }
 
-    public function getTempFilename(): ?string
+    public function getDescription(): ?string
     {
-        return $this->tempFilename;
-    }
-
-    public function setTempFilename(string $tempFilename): self
-    {
-        $this->tempFilename = $tempFilename;
-
-        return $this;
-    }
-
-    public function getFile(): ?string
-    {
-        return $this->file;
-    }
-
-    public function setFile(string $file): self
-    {
-        $this->file = $file;
-
-        return $this;
-    }
-
-    public function getWebView(): ?string
-    {
-        return $this->webView;
-    }
-
-    public function setWebView(string $webView): self
-    {
-        $this->webView = $webView;
-
-        return $this;
+        return $this->description;
     }
 }
