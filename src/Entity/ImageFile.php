@@ -22,7 +22,7 @@ class ImageFile implements ImageEntityInterface
     private ?string $description = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $file = null;
+    private ?string $imageFile = null;
 
     public function getId(): ?int
     {

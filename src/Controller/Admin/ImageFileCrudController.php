@@ -20,7 +20,7 @@ class ImageFileCrudController extends AbstractCrudController
         //     yield Field\AssociationField::new('author');
         // }
         yield Field\TextField::new('name');
-        yield Field\ImageField::new('file')
+        yield Field\ImageField::new('imageFile')
             ->setUploadedFileNamePattern('/uploads/images/[name].[extension]')
             ->setUploadDir('public/uploads/images/');
         yield Field\TextareaField::new('description');
