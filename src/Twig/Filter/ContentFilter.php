@@ -39,7 +39,7 @@ class ContentFilter implements RuntimeExtensionInterface
     {
         $entityManager = $this->doctrine->getManager();
         $repo = $entityManager->getRepository(Content::class);
-        $stuff = $repo->findOneBy(['slug' => $name]);
+        $stuff = $repo->findOneBy(['slug' => $slug]);
 
         if (null == $stuff) {
             return $content;
