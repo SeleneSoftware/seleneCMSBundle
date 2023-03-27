@@ -23,6 +23,7 @@ class ImageFile implements ImageEntityInterface
 
     #[ORM\Column(length: 255)]
     private ?string $imageFile = null;
+
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
