@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\Entity;
 
-use Selene\CMSBundle\Repository\ImageFileRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Interfaces\ImageEntityInterface;
-use Doctrine\DBAL\Types\Types;
+use Selene\CMSBundle\Repository\ImageFileRepository;
 
 #[ORM\Entity(repositoryClass: ImageFileRepository::class)]
 class ImageFile implements ImageEntityInterface
@@ -40,6 +40,7 @@ class ImageFile implements ImageEntityInterface
 
         return $this;
     }
+
     public function setDescription(?string $description): self
     {
         $this->description = $description;
@@ -51,6 +52,7 @@ class ImageFile implements ImageEntityInterface
     {
         return $this->description;
     }
+
     public function getImageFile(): ?string
     {
         return $this->imageFile;
@@ -61,5 +63,10 @@ class ImageFile implements ImageEntityInterface
         $this->imageFile = $imageFile;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
     }
 }
