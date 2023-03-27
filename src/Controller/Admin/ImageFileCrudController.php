@@ -3,6 +3,7 @@
 namespace Selene\CMSBundle\Controller\Admin;
 
 use Selene\CMSBundle\Entity\ImageFile;
+use EasyCorp\Bundle\EasyAdminBundle\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class ImageFileCrudController extends AbstractCrudController
