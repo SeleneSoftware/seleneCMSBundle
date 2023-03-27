@@ -5,6 +5,7 @@ namespace Selene\CMSBundle\Repository;
 use Selene\CMSBundle\Entity\ImageFile;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Selene\CMSBundle\Traits\RepositorySlugTrait;
 
 /**
  * @extends ServiceEntityRepository<ImageFile>
@@ -16,6 +17,7 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class ImageFileRepository extends ServiceEntityRepository
 {
+    use RepositorySlugTrait;
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, ImageFile::class);

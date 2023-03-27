@@ -34,4 +34,17 @@ class ContentFilter implements RuntimeExtensionInterface
 
         return $stuff->getValue();
     }
+
+    public function getImage($slug, $content): string
+    {
+        $entityManager = $this->doctrine->getManager();
+        $repo = $entityManager->getRepository(Content::class);
+        $stuff = $repo->findOneBy(['slug' => $name]);
+
+        if (null == $stuff) {
+            return $content;
+        }
+
+        return $stuff->getImageFile();
+    }
 }

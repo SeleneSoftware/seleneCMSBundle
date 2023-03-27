@@ -23,6 +23,8 @@ class ImageFile implements ImageEntityInterface
 
     #[ORM\Column(length: 255)]
     private ?string $imageFile = null;
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
 
     public function getId(): ?int
     {
@@ -68,5 +70,16 @@ class ImageFile implements ImageEntityInterface
     public function __toString(): string
     {
         return $this->name;
+    }
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
     }
 }
