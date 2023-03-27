@@ -13,10 +13,15 @@ class ImageFileCrudController extends AbstractCrudController
     }
 
 
-    // public function configureFields(string $pageName): iterable
-    // {
-    //     return [
-    //         ImageField::new('file'),
-    //     ];
-    // }
+    public function configureFields(string $pageName): iterable
+    {
+        // if (in_array('ROLE_ADMIN', $this->getUser()->getRoles(), true)) {
+        //     yield Field\AssociationField::new('author');
+        // }
+        yield Field\TextField::new('name');
+        yield Field\ImageField::new('file')
+            ->setUploadedFileNamePattern('/uploads/images/[name].[extension]')
+            ->setUploadDir('public/uploads/images/');
+        yield Field\TextareaField::new('description');
+    }
 }
