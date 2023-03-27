@@ -40,6 +40,12 @@ class ImageFile implements ImageEntityInterface
 
         return $this;
     }
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 
     public function getDescription(): ?string
     {
