@@ -7,6 +7,7 @@ use Selene\CMSBundle\Repository\BlogRepository;
 use Selene\CMSBundle\Traits\EntityDate;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Selene\CMSBundle\Entity\ImageFile;
 
 #[ORM\Entity(repositoryClass: BlogRepository::class)]
 class Blog implements DatedEntityInterface
@@ -42,8 +43,8 @@ class Blog implements DatedEntityInterface
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $DatePublished = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $imageFile = null;
+    #[ORM\ManyToOne]
+    private ?ImageFile $imageFile = null;
 
     public function getId(): ?int
     {
@@ -121,16 +122,15 @@ class Blog implements DatedEntityInterface
 
         return $this;
     }
-
-    public function getImageFile(): ?string
+    public function getImageFile(): ?ImageFile
     {
         return $this->imageFile;
     }
 
-    public function setImageFile(?string $imageFile): self
-    {
-        $this->imageFile = $imageFile;
+        public function setImageFile(?ImageFile $imageFile): self
+        {
+            $this->imageFile = $imageFile;
 
-        return $this;
-    }
+            return $this;
+        }
 }
