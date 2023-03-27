@@ -2,9 +2,9 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBundle\Entity\Blog;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field;
+use Selene\CMSBundle\Entity\Blog;
 
 class BlogCrudController extends AbstractCrudController
 {
@@ -21,9 +21,10 @@ class BlogCrudController extends AbstractCrudController
         yield Field\TextField::new('title');
         yield Field\SlugField::new('slug')->setTargetFieldName('title');
         yield Field\TextareaField::new('preview');
-        yield Field\ImageField::new('imageFile')
-            ->setUploadedFileNamePattern('/uploads/images/[name].[extension]')
-            ->setUploadDir('public/uploads/images/');
+        yield Field\AssociationField::new('imageFile'); // ->autocomplete();
+        // yield Field\ImageField::new('imageFile')
+        //     ->setUploadedFileNamePattern('/uploads/images/[name].[extension]')
+        //     ->setUploadDir('public/uploads/images/');
         yield Field\TextareaField::new('content'); // Only because Trix isn't working properly
         yield Field\DateTimeField::new('date_published');
         yield Field\DateTimeField::new('date_updated')

@@ -2,8 +2,8 @@
 
 namespace Selene\CMSBundle\EventSubscriber;
 
-use Selene\CMSBundle\Interfaces\DatedEntityInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent;
+use Selene\CMSBundle\Interfaces\DatedEntityInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class EasyAdminSubscriber implements EventSubscriberInterface
@@ -30,5 +30,13 @@ class EasyAdminSubscriber implements EventSubscriberInterface
         }
 
         $entity->setDateUpdated(new \DateTime());
+    }
+
+    public function saveImage(BeforeEntityUpdatesEvent $event)
+    {
+        exit('fuck me');
+        if (!($entity instanceof ImageEntityInterface)) {
+            return;
+        }
     }
 }

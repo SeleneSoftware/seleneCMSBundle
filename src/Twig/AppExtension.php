@@ -24,6 +24,7 @@ class AppExtension extends AbstractExtension
             // parameter: ['is_safe' => ['html']]
             // Reference: https://twig.symfony.com/doc/3.x/advanced.html#automatic-escaping
             new TwigFilter('*_content', [ContentFilter::class, 'getContent'], ['is_safe' => ['html']]),
+            new TwigFilter('*_image', [ContentFilter::class, 'getImage'], ['is_safe' => ['html']]),
         ];
     }
 

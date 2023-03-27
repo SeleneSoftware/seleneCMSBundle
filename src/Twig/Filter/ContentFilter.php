@@ -3,6 +3,7 @@
 namespace Selene\CMSBundle\Twig\Filter;
 
 use Selene\CMSBundle\Entity\Content;
+use Selene\CMSBundle\Entity\ImageFile;
 use Doctrine\Persistence\ManagerRegistry;
 use Twig\Extension\RuntimeExtensionInterface;
 
@@ -33,5 +34,18 @@ class ContentFilter implements RuntimeExtensionInterface
         }
 
         return $stuff->getValue();
+    }
+
+    public function getImage($slug, $content): string
+    {
+        $entityManager = $this->doctrine->getManager();
+        $repo = $entityManager->getRepository(ImageFile::class);
+        $stuff = $repo->findOneBy(['slug' => $slug]);
+
+        if (null == $stuff) {
+            return $content;
+        }
+
+        return $stuff->getImageFile();
     }
 }

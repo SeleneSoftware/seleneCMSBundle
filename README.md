@@ -60,8 +60,12 @@ This will install the following routes in your application:
 ## Usage
 
 Content is managed in the backend when a Twig extension is used.  The name of the block will appear in the admin panel on first load and give the ability to change the data inside the tag.  To create a content block with the title "selene", use the following tag.
+
+Images also have a content block.  If an image has been uploaded in the sytem, a slug is generated that will load the url of that image.  If the image hasn't been uploaded yet, the url given will be used as a default.
 ```Twig
 {% apply selene_content %}<div class="block">This is the default content in the block</div>{% endapply%}
+
+<img srg="{% apply name_image %}image/url.jpg"{% endapply %}
 ```
 
 This also installs settings, which are true/false or on/off.  To use one of those, use the following tag:
@@ -78,4 +82,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 When creating a new feature branch, run a ```composer update````` and a  `````npm update````` and commit those changes first.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/) 
+[MIT](https://choosealicense.com/licenses/mit/)
