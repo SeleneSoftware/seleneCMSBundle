@@ -45,4 +45,15 @@ class ImageFile implements ImageEntityInterface
     {
         return $this->description;
     }
+    public function getImageFile(): ?string
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(?string $imageFile): self
+    {
+        $this->imageFile = $imageFile;
+
+        return $this;
+    }
 }
