@@ -2,8 +2,8 @@
 
 namespace Selene\CMSBundle\Handlers;
 
-use Selene\CMSBundle\Entity\Settings;
 use Doctrine\Persistence\ManagerRegistry;
+use Selene\CMSBundle\Entity\Settings;
 
 class SettingsHandler
 {

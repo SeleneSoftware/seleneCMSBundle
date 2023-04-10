@@ -2,12 +2,9 @@
 
 namespace Selene\CMSBundle;
 
-use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
-use Symfony\Component\Console\Application;
-use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class seleneCMSBundle extends AbstractBundle
 {

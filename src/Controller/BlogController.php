@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\Controller;
 
-use Selene\CMSBundle\Entity\Blog;
-use Selene\CMSBundle\Traits\BlogTrait;
 use Doctrine\Persistence\ManagerRegistry;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
+use Selene\CMSBundle\Entity\Blog;
+use Selene\CMSBundle\Traits\BlogTrait;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

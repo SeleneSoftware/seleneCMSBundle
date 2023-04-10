@@ -72,6 +72,7 @@ class ImageFile implements ImageEntityInterface
     {
         return $this->name;
     }
+
     public function getSlug(): ?string
     {
         return $this->slug;

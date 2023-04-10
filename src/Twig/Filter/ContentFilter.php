@@ -2,9 +2,9 @@
 
 namespace Selene\CMSBundle\Twig\Filter;
 
+use Doctrine\Persistence\ManagerRegistry;
 use Selene\CMSBundle\Entity\Content;
 use Selene\CMSBundle\Entity\ImageFile;
-use Doctrine\Persistence\ManagerRegistry;
 use Twig\Extension\RuntimeExtensionInterface;
 
 class ContentFilter implements RuntimeExtensionInterface

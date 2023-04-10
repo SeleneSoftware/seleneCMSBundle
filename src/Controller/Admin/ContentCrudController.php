@@ -2,9 +2,9 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBundle\Entity\Content;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field;
+use Selene\CMSBundle\Entity\Content;
 
 class ContentCrudController extends AbstractCrudController
 {

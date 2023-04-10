@@ -2,12 +2,12 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBundle\Entity\ImageFile;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Selene\CMSBundle\Entity\Blog;
 use Selene\CMSBundle\Entity\Content;
+use Selene\CMSBundle\Entity\ImageFile;
 use Selene\CMSBundle\Entity\Settings;
 use Selene\CMSBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
