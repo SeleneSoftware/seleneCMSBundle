@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace Selene\CMSBundle\Command;
 
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -14,7 +14,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 #[AsCommand(
     name: 'user:admin',
-    description: 'Add a short description for your command',
+    description: 'Add admin credentials to a user.',
 )]
 class UserAdminCommand extends Command
 {
