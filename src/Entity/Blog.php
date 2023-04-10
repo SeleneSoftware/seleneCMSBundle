@@ -2,12 +2,11 @@
 
 namespace Selene\CMSBundle\Entity;
 
+use Doctrine\DBAL\Types\Types;
+use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Interfaces\DatedEntityInterface;
 use Selene\CMSBundle\Repository\BlogRepository;
 use Selene\CMSBundle\Traits\EntityDate;
-use Doctrine\DBAL\Types\Types;
-use Doctrine\ORM\Mapping as ORM;
-use Selene\CMSBundle\Entity\ImageFile;
 
 #[ORM\Entity(repositoryClass: BlogRepository::class)]
 class Blog implements DatedEntityInterface
@@ -122,6 +121,7 @@ class Blog implements DatedEntityInterface
 
         return $this;
     }
+
     public function getImageFile(): ?ImageFile
     {
         return $this->imageFile;

@@ -2,9 +2,9 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBundle\Entity\ImageFile;
-use EasyCorp\Bundle\EasyAdminBundle\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field;
+use Selene\CMSBundle\Entity\ImageFile;
 
 class ImageFileCrudController extends AbstractCrudController
 {
@@ -12,7 +12,6 @@ class ImageFileCrudController extends AbstractCrudController
     {
         return ImageFile::class;
     }
-
 
     public function configureFields(string $pageName): iterable
     {

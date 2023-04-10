@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\Repository;
 
-use Selene\CMSBundle\Entity\Blog;
-use Selene\CMSBundle\Traits\RepositorySlugTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Selene\CMSBundle\Entity\Blog;
+use Selene\CMSBundle\Traits\RepositorySlugTrait;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 #[AutoconfigureTag('doctrine.repository_service')]

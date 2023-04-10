@@ -2,9 +2,9 @@
 
 namespace Selene\CMSBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Interfaces\BoolEntityInterface;
 use Selene\CMSBundle\Repository\SettingsRepository;
-use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SettingsRepository::class)]
 class Settings implements BoolEntityInterface

@@ -2,9 +2,9 @@
 
 namespace Selene\CMSBundle\Repository;
 
-use Selene\CMSBundle\Entity\Settings;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Selene\CMSBundle\Entity\Settings;
 
 /**
  * @extends ServiceEntityRepository<Settings>

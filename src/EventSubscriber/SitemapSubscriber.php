@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\EventSubscriber;
 
-use Selene\CMSBundle\Repository\BlogRepository;
 use Presta\SitemapBundle\Event\SitemapPopulateEvent;
 use Presta\SitemapBundle\Service\UrlContainerInterface;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
+use Selene\CMSBundle\Repository\BlogRepository;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 

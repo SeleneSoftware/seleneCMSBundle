@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\Controller;
 
-use Selene\CMSBundle\Form\ChangePasswordFormType;
-use Selene\CMSBundle\Form\ResetPasswordRequestFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Selene\CMSBundle\Entity\User;
+use Selene\CMSBundle\Form\ChangePasswordFormType;
+use Selene\CMSBundle\Form\ResetPasswordRequestFormType;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;

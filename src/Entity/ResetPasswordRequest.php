@@ -2,9 +2,8 @@
 
 namespace Selene\CMSBundle\Entity;
 
-use Selene\CMSBundle\Repository\ResetPasswordRequestRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Selene\CMSBundle\Entity\User;
+use Selene\CMSBundle\Repository\ResetPasswordRequestRepository;
 use SymfonyCasts\Bundle\ResetPassword\Model\ResetPasswordRequestInterface;
 use SymfonyCasts\Bundle\ResetPassword\Model\ResetPasswordRequestTrait;
 

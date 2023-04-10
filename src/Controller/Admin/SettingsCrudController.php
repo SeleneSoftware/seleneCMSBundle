@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use Selene\CMSBundle\Entity\Settings;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Selene\CMSBundle\Entity\Settings;
 
 class SettingsCrudController extends AbstractCrudController
 {

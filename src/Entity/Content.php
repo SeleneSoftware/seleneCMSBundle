@@ -2,11 +2,11 @@
 
 namespace Selene\CMSBundle\Entity;
 
+use Doctrine\DBAL\Types\Types;
+use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Interfaces\DatedEntityInterface;
 use Selene\CMSBundle\Repository\ContentRepository;
 use Selene\CMSBundle\Traits\EntityDate;
-use Doctrine\DBAL\Types\Types;
-use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ContentRepository::class)]
 class Content implements DatedEntityInterface
