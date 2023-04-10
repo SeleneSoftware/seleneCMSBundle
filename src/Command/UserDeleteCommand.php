@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace Selene\CMSBundle\Command;
 
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -12,7 +12,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
     name: 'user:delete',
-    description: 'Add a short description for your command',
+    description: 'Delete a User',
 )]
 class UserDeleteCommand extends Command
 {
