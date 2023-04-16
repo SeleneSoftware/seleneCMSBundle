@@ -2,9 +2,11 @@
 
 namespace Selene\CMSBundle\Twig\Parser;
 
+use Twig\Node\Node;
+
 class ContentParser extends \Twig\TokenParser\AbstractTokenParser
 {
-    public function parse(\Twig\Token $token)
+    public function parse(\Twig\Token $token): Node
     {
         $parser = $this->parser;
         $stream = $parser->getStream();
@@ -17,7 +19,7 @@ class ContentParser extends \Twig\TokenParser\AbstractTokenParser
         return new Project_Set_Node($name, $value, $token->getLine(), $this->getTag());
     }
 
-    public function getTag()
+    public function getTag(): string
     {
         return 'content';
     }

@@ -22,22 +22,10 @@ class BlogCrudController extends AbstractCrudController
         yield Field\SlugField::new('slug')->setTargetFieldName('title');
         yield Field\TextareaField::new('preview');
         yield Field\AssociationField::new('imageFile'); // ->autocomplete();
-        // yield Field\ImageField::new('imageFile')
-        //     ->setUploadedFileNamePattern('/uploads/images/[name].[extension]')
-        //     ->setUploadDir('public/uploads/images/');
         yield Field\TextareaField::new('content'); // Only because Trix isn't working properly
         yield Field\DateTimeField::new('date_published');
         yield Field\DateTimeField::new('date_updated')
             ->setDisabled();
-        // Field\TextEditorField::new('content')->setTrixEditorConfig([
-        //     'blockAttributes' => [
-        //         'default' => ['tagName' => 'p'],
-        //         'heading1' => ['tagName' => 'h2'],
-        //     ],
-        //     'css' => [
-        //         'attachment' => 'admin_file_field_attachment',
-        //     ],
-        // ]),
     }
 
     public function createEntity(string $entityFqcn)
