@@ -33,10 +33,6 @@ BlogController extends Selene\CMSBundle\Controller\BlogController
 SecurityController extends Selene\CMSBundle\Controller\SecurityController
 RegistrationController extends Selene\CMSBundle\Controller\RegistrationController
 AdminDashboardController extends Selene\CMSBundle\Controller\Admin\DashboardController
-AdminContentController extends Selene\CMSBundle\Controller\Admin\ContentCrudController
-AdminBlogController extends Selene\CMSBundle\Controller\Admin\BlogCrudController
-AdminUsersController extends Selene\CMSBundle\Controller\Admin\UserCrudController
-AdminSettingsController extends Selene\CMSBundle\Controller\Admin\SettingCrudController
 ```
 
 
