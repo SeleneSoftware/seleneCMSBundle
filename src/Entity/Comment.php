@@ -5,10 +5,13 @@ namespace Selene\CMSBundle\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Repository\CommentRepository;
+use Selene\CMSBundle\Traits\EntityDate;
 
 #[ORM\Entity(repositoryClass: CommentRepository::class)]
 class Comment
 {
+    use EntityDate;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -22,6 +25,9 @@ class Comment
 
     #[ORM\ManyToOne]
     private ?User $author = null;
+
+    #[ORM\Column]
+    private ?bool $public = false;
 
     public function getId(): ?int
     {
@@ -60,6 +66,18 @@ class Comment
     public function setAuthor(?User $author): self
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    public function getPublic(): ?bool
+    {
+        return $this->public;
+    }
+
+    public function setPublic(?bool $public): self
+    {
+        $this->public = $public;
 
         return $this;
     }
