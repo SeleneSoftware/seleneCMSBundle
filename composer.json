@@ -1,7 +1,7 @@
 {
     "name": "selenesoftware/cms-bundle",
     "type": "symfony-bundle",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "CMS platform for Symfony",
     "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
     "license": "MIT",
@@ -20,12 +20,11 @@
         "symfony/security-csrf": "^6.2",
         "symfony/form": "^6.2",
         "symfony/mime": "^6.2",
-        "symfony/symfony": "6.2.*",
         "easycorp/easyadmin-bundle": "^4.4",
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^3.3",
         "doctrine/doctrine-bundle": "^2.7",
-        "doctrine/orm": "^2.12",
+        "doctrine/orm": "^2.15",
         "symfony/orm-pack": "^2.3",
         "symfonycasts/reset-password-bundle": "^1.17"
     },

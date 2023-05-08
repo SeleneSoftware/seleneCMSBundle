@@ -2,6 +2,8 @@
 
 namespace Selene\CMSBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Selene\CMSBundle\Interfaces\DatedEntityInterface;
@@ -44,6 +46,14 @@ class Blog implements DatedEntityInterface
 
     #[ORM\ManyToOne]
     private ?ImageFile $imageFile = null;
+
+    #[ORM\OneToMany(mappedBy: 'blog', targetEntity: Comment::class)]
+    private Collection $comments;
+
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -127,10 +137,40 @@ class Blog implements DatedEntityInterface
         return $this->imageFile;
     }
 
-        public function setImageFile(?ImageFile $imageFile): self
+    public function setImageFile(?ImageFile $imageFile): self
+    {
+        $this->imageFile = $imageFile;
+
+        return $this;
+    }
+
+        /**
+         * @return Collection<int, Comment2>
+         */
+        public function getComments(): Collection
         {
-            $this->imageFile = $imageFile;
+            return $this->comments;
+        }
+
+        public function addComment(Comment $comment): self
+        {
+            if (!$this->comments->contains($comment)) {
+                $this->comments->add($comment);
+                $comment->setBlog($this);
+            }
 
             return $this;
         }
+
+            public function removeComment(Comment $comment): self
+            {
+                if ($this->comments->removeElement($comment)) {
+                    // set the owning side to null (unless already changed)
+                    if ($comment2->getBlog() === $this) {
+                        $comment2->setBlog(null);
+                    }
+                }
+
+                return $this;
+            }
 }
