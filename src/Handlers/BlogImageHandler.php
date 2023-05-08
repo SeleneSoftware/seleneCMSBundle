@@ -22,3 +22,4 @@ class BlogImageHandler
     {
         return $this->filter->getImage($blog->getImageFile()->getSlug(), '');
     }
+}
