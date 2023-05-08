@@ -18,8 +18,8 @@ class BlogImageHandler
         $this->filter = $filter;
     }
 
-    public function getBlogImage(Blog $blog)
+    public function getBlogImage(Blog $blog, string $url = '')
     {
-        return $this->filter->getImage($blog->getImageFile()->getSlug(), '');
+        return $this->filter->getImage($blog->getImageFile()->getSlug(), $url);
     }
 }
