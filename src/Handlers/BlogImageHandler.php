@@ -18,7 +18,7 @@ class BlogImageHandler
         $$this->filter = $filter;
     }
 
-    public function getBlogImage(Blog $blog): string
+    public function getBlogImage(Blog $blog)
     {
         return $this->filter->getImage($blog->getImageFile()->getSlug(), '');
     }
