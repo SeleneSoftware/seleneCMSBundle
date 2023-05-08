@@ -18,6 +18,7 @@ class CommentCrudController extends AbstractCrudController
         yield Field\TextField::new('title');
         yield Field\TextareaField::new('content');
         yield Field\BooleanField::new('public');
+        yield Field\TextField::new('blog')->setFormTypeOption('disabled', 'disabled');
         yield Field\TextField::new('author')->setFormTypeOption('disabled', 'disabled');
     }
 }
