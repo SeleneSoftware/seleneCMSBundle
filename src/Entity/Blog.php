@@ -147,24 +147,24 @@ class Blog implements DatedEntityInterface
         /**
          * @return Collection<int, Comment2>
          */
-        public function getComment2s(): Collection
+        public function getComments(): Collection
         {
-            return $this->comment2s;
+            return $this->comments;
         }
 
-        public function addComment2(Comment2 $comment2): self
+        public function addComment(Comment $comment): self
         {
-            if (!$this->comment2s->contains($comment2)) {
-                $this->comment2s->add($comment2);
-                $comment2->setBlog($this);
+            if (!$this->comments->contains($comment)) {
+                $this->comments->add($comment);
+                $comment->setBlog($this);
             }
 
             return $this;
         }
 
-            public function removeComment2(Comment2 $comment2): self
+            public function removeComment(Comment $comment): self
             {
-                if ($this->comment2s->removeElement($comment2)) {
+                if ($this->comments->removeElement($comment)) {
                     // set the owning side to null (unless already changed)
                     if ($comment2->getBlog() === $this) {
                         $comment2->setBlog(null);
