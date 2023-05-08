@@ -15,7 +15,7 @@ class BlogImageHandler
     public function __construct(ManagerRegistry $doctrine, ContentFilter $filter)
     {
         $this->doctrine = $doctrine;
-        $$this->filter = $filter;
+        $this->filter = $filter;
     }
 
     public function getBlogImage(Blog $blog)
