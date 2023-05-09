@@ -3,7 +3,6 @@
 namespace Selene\CMSBundle\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\Persistence\ManagerRegistry;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Selene\CMSBundle\Entity\Blog;
 use Selene\CMSBundle\Entity\Comment;
@@ -19,7 +18,7 @@ class BlogController extends AbstractController
     use BlogTrait;
 
     #[Route('/blog', name: 'selene_cms_blog', options: ['sitemap' => ['priority' => 0.7, 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]])]
-    public function blogList(ManagerRegistry $doctrine): Response
+    public function blogList(EntityManagerInterface $doctrine): Response
     {
         return $this->render('blog/index.html.twig', [
             'blogs' => $this->getBlogList($doctrine),
