@@ -38,6 +38,8 @@ class BlogController extends AbstractController
                 ->setBlog($blog);
             $doctrine->persist($comment);
             $doctrine->flush();
+
+            $comment = new Comment();
         }
 
         if (new \DateTime() > $blog->getDatePublished()) {
