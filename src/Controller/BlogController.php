@@ -2,6 +2,7 @@
 
 namespace Selene\CMSBundle\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Selene\CMSBundle\Entity\Blog;
@@ -26,7 +27,7 @@ class BlogController extends AbstractController
     }
 
     #[Route('/blog/{slug}', name: 'selene_cms_blog_post')]
-    public function blogArticle(#[MapEntity(mapping: ['slug' => 'slug'])] Blog $blog, ManagerRegistry $doctrine, Request $request): Response
+    public function blogArticle(#[MapEntity(mapping: ['slug' => 'slug'])] Blog $blog, EntityManagerInterface $doctrine, Request $request): Response
     {
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
@@ -36,9 +37,8 @@ class BlogController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $comment->setAuthor($this->getUser())
                 ->setBlog($blog);
-            $em = $doctrine->getEntityManager();
-            $em->persist($comment);
-            $em->flush();
+            $doctrine->persist($comment);
+            $doctrine->flush();
         }
 
         if (new \DateTime() > $blog->getDatePublished()) {
