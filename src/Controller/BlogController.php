@@ -39,7 +39,10 @@ class BlogController extends AbstractController
             $doctrine->persist($comment);
             $doctrine->flush();
 
+            unset($form);
+            unset($comment);
             $comment = new Comment();
+            $form = $this->createForm(CommentType::class, $comment);
         }
 
         if (new \DateTime() > $blog->getDatePublished()) {
