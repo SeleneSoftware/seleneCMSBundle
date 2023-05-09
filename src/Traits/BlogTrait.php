@@ -2,12 +2,12 @@
 
 namespace Selene\CMSBundle\Traits;
 
-use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 use Selene\CMSBundle\Entity\Blog;
 
 trait BlogTrait
 {
-    public function getBlogList(ManagerRegistry $doctrine, $entries = null): array
+    public function getBlogList(EntityManagerInterface $doctrine, $entries = null): array
     {
         $loop = 0;
         foreach ($blogs = $doctrine->getRepository(Blog::class)->findAll() as $k => $b) {

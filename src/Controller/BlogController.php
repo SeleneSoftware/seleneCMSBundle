@@ -2,7 +2,7 @@
 
 namespace Selene\CMSBundle\Controller;
 
-use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Selene\CMSBundle\Entity\Blog;
 use Selene\CMSBundle\Entity\Comment;
@@ -18,7 +18,7 @@ class BlogController extends AbstractController
     use BlogTrait;
 
     #[Route('/blog', name: 'selene_cms_blog', options: ['sitemap' => ['priority' => 0.7, 'changefreq' => UrlConcrete::CHANGEFREQ_WEEKLY]])]
-    public function blogList(ManagerRegistry $doctrine): Response
+    public function blogList(EntityManagerInterface $doctrine): Response
     {
         return $this->render('blog/index.html.twig', [
             'blogs' => $this->getBlogList($doctrine),
@@ -26,7 +26,7 @@ class BlogController extends AbstractController
     }
 
     #[Route('/blog/{slug}', name: 'selene_cms_blog_post')]
-    public function blogArticle(#[MapEntity(mapping: ['slug' => 'slug'])] Blog $blog, ManagerRegistry $doctrine, Request $request): Response
+    public function blogArticle(#[MapEntity(mapping: ['slug' => 'slug'])] Blog $blog, EntityManagerInterface $doctrine, Request $request): Response
     {
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
@@ -34,9 +34,15 @@ class BlogController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $doctrine->getEntityManager();
-            $em->persist($comment);
-            $em->flush();
+            $comment->setAuthor($this->getUser())
+                ->setBlog($blog);
+            $doctrine->persist($comment);
+            $doctrine->flush();
+
+            unset($form);
+            unset($comment);
+            $comment = new Comment();
+            $form = $this->createForm(CommentType::class, $comment);
         }
 
         if (new \DateTime() > $blog->getDatePublished()) {
