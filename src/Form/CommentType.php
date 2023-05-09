@@ -4,7 +4,6 @@ namespace Selene\CMSBundle\Form;
 
 use Selene\CMSBundle\Entity\Comment;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -26,9 +25,6 @@ class CommentType extends AbstractType
         $builder
             ->add('title', TextType::class)
             ->add('content', TextareaType::class)
-            ->add('author', HiddenType::class, [
-                'data' => $this->security->getUser(),
-            ])
             ->add('submit', SubmitType::class)
         ;
     }

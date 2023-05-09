@@ -34,6 +34,8 @@ class BlogController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $comment->setAuthor($this->gerUser())
+                ->setBlog($blog);
             $em = $doctrine->getEntityManager();
             $em->persist($comment);
             $em->flush();
