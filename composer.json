@@ -31,7 +31,7 @@
     "require-dev":{
         "symfony/maker-bundle":"^6.2"
     },
-    autoload": {
+    "autoload": {
         "psr-4": {
             "Selene\\CMSBundle\\": "src/"
         }
