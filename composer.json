@@ -26,7 +26,8 @@
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/orm": "^2.15",
         "symfony/orm-pack": "^2.3",
-        "symfonycasts/reset-password-bundle": "^1.17"
+        "symfonycasts/reset-password-bundle": "^1.17",
+        "symfony/maker-bundle": "^1.48"
     },
     "autoload": {
         "psr-4": {
@@ -44,6 +45,5 @@
         }
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.48"
     }
 }
