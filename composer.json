@@ -28,9 +28,6 @@
         "symfony/orm-pack": "^2.3",
         "symfonycasts/reset-password-bundle": "^1.17"
     },
-    "require-dev":{
-        "symfony/maker-bundle":"^6.2"
-    },
     "autoload": {
         "psr-4": {
             "Selene\\CMSBundle\\": "src/"
@@ -45,5 +42,8 @@
         "allow-plugins": {
             "symfony/runtime": true
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.48"
     }
 }
