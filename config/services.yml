@@ -16,3 +16,8 @@ services:
         resource: '../src/Repository/*'
         # tags: ['doctrine.repository_service']
         public: true
+
+    Selene\CMSBundle\Maker\:
+        resource: '../src/Maker/*'
+        tags: ['maker.command']
+        public: true
