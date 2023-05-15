@@ -17,8 +17,8 @@ services:
         # tags: ['doctrine.repository_service']
         public: true
 
-    Selene\CMSBundle\Maker\:
-        class: '../src/Maker/MakerController'
+    selene.boilerplate.controller:
+        class: 'Selene\\CMSBundle\\Maker\\MakerController'
         tags: ['maker.command']
         public: true
         arguments:

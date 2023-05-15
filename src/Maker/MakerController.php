@@ -30,6 +30,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\MakerBundle\MakerInterface;
 
 /**
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
