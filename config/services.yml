@@ -18,6 +18,8 @@ services:
         public: true
 
     Selene\CMSBundle\Maker\:
-        resource: '../src/Maker/*'
+        class: '../src/Maker/MakerController'
         tags: ['maker.command']
         public: true
+        arguments:
+          - '@maker.php_compat_util'
