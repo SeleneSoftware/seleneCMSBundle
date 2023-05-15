@@ -3,7 +3,9 @@
 namespace Selene\CMSBundle\Maker;
 
 /*
- * This file is part of the Symfony MakerBundle package.
+ * This file was part of the Symfony MakerBundle package.
+ * Jason Marshall has used it and rewritten parts for
+ * boilerplate genreation for the Selene CMS Bundle
  *
  * (c) Fabien Potencier <fabien@symfony.com>
  *
@@ -32,6 +34,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  * @author Ryan Weaver <weaverryan@gmail.com>
+ * @author Jason Marshall <JasonMarshallSelene@gmail.com>
  */
 final class MakerController extends AbstractMaker
 {
@@ -68,7 +71,7 @@ final class MakerController extends AbstractMaker
     public function generate(InputInterface $input, ConsoleStyle $io, Generator $generator): void
     {
         $controllerClassNameDetails = $generator->createClassNameDetails(
-            $input->getArgument('controller-class'),
+            'Blog',
             'Controller\\',
             'Controller'
         );
