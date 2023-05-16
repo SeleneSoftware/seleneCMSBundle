@@ -18,8 +18,8 @@ services:
         public: true
 
     selene.boilerplate.controller:
-        class: 'Selene\\CMSBundle\\Maker\\MakerController'
+        class: 'Selene\CMSBundle\Maker\MakerController'
         tags: ['maker.command']
-        public: true
+        # public: true
         arguments:
           - '@maker.php_compat_util'
