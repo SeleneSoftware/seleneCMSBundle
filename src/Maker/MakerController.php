@@ -13,7 +13,7 @@ namespace Selene\CMSBundle\Maker;
  * file that was distributed with this source code.
  */
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Selene\CMSBundle\Controller\BlogController;
 use Symfony\Bundle\MakerBundle\ConsoleStyle;
 use Symfony\Bundle\MakerBundle\DependencyBuilder;
 use Symfony\Bundle\MakerBundle\Generator;
@@ -30,7 +30,6 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\MakerBundle\MakerInterface;
 
 /**
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
@@ -80,7 +79,7 @@ final class MakerController extends AbstractMaker
         $withTemplate = $this->isTwigInstalled() && !$input->getOption('no-template');
 
         $useStatements = new UseStatementGenerator([
-            AbstractController::class,
+            BlogController::class,
             $withTemplate ? Response::class : JsonResponse::class,
             Route::class,
 
