@@ -2,6 +2,7 @@
 
 namespace Selene\CMSBundle\Controller;
 
+use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,10 +11,11 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecureController extends AbstractController
 {
     #[Route(path: '/login', name: 'selene_cms_login')]
-    public function login(AuthenticationUtils $authenticationUtils): Response
+    public function login(AuthenticationUtils $authenticationUtils, ContentFilter $content): Response
     {
+        $redirect = $content->getContent('Login Redirect', 'selene_cms_blog');
         if ($this->getUser()) {
-            return $this->redirectToRoute('selene_cs_login');
+            return $this->redirectToRoute($redirect);
         }
 
         // get the login error if there is one

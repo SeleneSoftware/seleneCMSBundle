@@ -50,7 +50,7 @@ class AppFormAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         // For example:
-        return new RedirectResponse($this->urlGenerator->generate('selene_cms_admin'));
+        return new RedirectResponse($this->urlGenerator->generate('selene_cms_blog'));
     }
 
     protected function getLoginUrl(Request $request): string
