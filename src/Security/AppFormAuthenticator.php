@@ -2,6 +2,7 @@
 
 namespace Selene\CMSBundle\Security;
 
+use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,9 +24,12 @@ class AppFormAuthenticator extends AbstractLoginFormAuthenticator
 
     private UrlGeneratorInterface $urlGenerator;
 
-    public function __construct(UrlGeneratorInterface $urlGenerator)
+    private ContentFilter $content;
+
+    public function __construct(UrlGeneratorInterface $urlGenerator, ContentFilter $content)
     {
         $this->urlGenerator = $urlGenerator;
+        $this->content = $content;
     }
 
     public function authenticate(Request $request): Passport
@@ -49,8 +53,9 @@ class AppFormAuthenticator extends AbstractLoginFormAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        // For example:
-        return new RedirectResponse($this->urlGenerator->generate('selene_cms_blog'));
+        $redirect = $this->content->getContent('Login Redirect', 'selene_cms_blog');
+
+        return new RedirectResponse($this->urlGenerator->generate($redirect));
     }
 
     protected function getLoginUrl(Request $request): string
