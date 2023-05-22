@@ -71,7 +71,7 @@ class DashboardController extends AbstractDashboardController
         // if you prefer to create the user menu from scratch, use: return UserMenu::new()->...
         return parent::configureUserMenu($user)
             // use the given $user object to get the user name
-            ->setName($user->getFullName())
+            ->setName($user->getName())
         // use this method if you don't want to display the name of the user
             ->displayUserName(false)
 
