@@ -76,12 +76,11 @@ class DashboardController extends AbstractDashboardController
             ->displayUserName(false)
 
         // you can return an URL with the avatar image
-            ->setAvatarUrl('https://...')
-            ->setAvatarUrl($user->getProfileImageUrl())
+            ->setAvatarUrl($user->getImageFile()->getImageFile())
         // use this method if you don't want to display the user image
             ->displayUserAvatar(false)
         // you can also pass an email address to use gravatar's service
-            ->setGravatarEmail($user->getMainEmailAddress())
+            ->setGravatarEmail($user->getEmail())
 
         // you can use any type of menu item, except submenus
             ->addMenuItems([

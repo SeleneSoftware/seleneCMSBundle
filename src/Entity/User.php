@@ -37,6 +37,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $name = 'Full Name';
 
+    #[ORM\ManyToOne]
+    private ?ImageFile $imageFile = null;
+
     public function __construct()
     {
         $this->blogs = new ArrayCollection();
@@ -174,6 +177,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getImageFile(): ?ImageFile
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(?ImageFile $imageFile): self
+    {
+        $this->imageFile = $imageFile;
 
         return $this;
     }
