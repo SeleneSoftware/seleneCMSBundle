@@ -89,4 +89,13 @@ class RegisterController extends AbstractController
 
         return $this->redirectToRoute('app_register');
     }
+
+    #[Route('/profile', name: 'selene_cms_profile')]
+    public function profile(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppFormAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
+    {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+
+        return $this->render('registration/profile.html.twig', [
+        ]);
+    }
 }
