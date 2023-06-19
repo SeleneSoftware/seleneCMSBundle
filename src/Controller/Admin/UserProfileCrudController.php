@@ -5,7 +5,7 @@ namespace Selene\CMSBundle\Controller\Admin;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use Selene\CMSBundle\Entity\User;
 
-class UserCrudController extends AbstractCrudController
+class UserProfileCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
