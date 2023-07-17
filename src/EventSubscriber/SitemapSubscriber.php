@@ -53,7 +53,7 @@ class SitemapSubscriber implements EventSubscriberInterface
             $urls->addUrl(
                 new UrlConcrete(
                     $this->router->generate(
-                        'blog_post',
+                        'selene_cms_blog_post',
                         ['slug' => $post->getSlug()],
                         UrlGeneratorInterface::ABSOLUTE_URL
                     )
