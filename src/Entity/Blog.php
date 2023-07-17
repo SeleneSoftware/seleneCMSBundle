@@ -29,12 +29,6 @@ class Blog implements DatedEntityInterface
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $content = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date_created = null;
-
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date_updated = null;
-
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
