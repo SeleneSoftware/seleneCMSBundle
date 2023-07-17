@@ -34,7 +34,7 @@ class EasyAdminSubscriber implements EventSubscriberInterface
 
     public function saveImage(BeforeEntityUpdatesEvent $event)
     {
-        exit('fuck me');
+        return;
         if (!($entity instanceof ImageEntityInterface)) {
             return;
         }

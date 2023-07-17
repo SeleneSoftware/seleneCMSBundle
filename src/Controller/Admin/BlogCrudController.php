@@ -44,6 +44,7 @@ class BlogCrudController extends AbstractCrudController
     {
         $entity = new Blog();
         $entity->setAuthor($this->getUser());
+        $entity->setDateCreated(new \DateTime());
 
         return $entity;
     }
