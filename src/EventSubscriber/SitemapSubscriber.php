@@ -58,7 +58,7 @@ class SitemapSubscriber implements EventSubscriberInterface
                         UrlGeneratorInterface::ABSOLUTE_URL
                     )
                 ),
-                'default'
+                'blog'
             );
         }
     }
