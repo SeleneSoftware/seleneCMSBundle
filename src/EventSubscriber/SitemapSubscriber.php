@@ -4,8 +4,11 @@ namespace Selene\CMSBundle\EventSubscriber;
 
 use Presta\SitemapBundle\Event\SitemapPopulateEvent;
 use Presta\SitemapBundle\Service\UrlContainerInterface;
+use Presta\SitemapBundle\Sitemap\Url\GoogleImage;
+use Presta\SitemapBundle\Sitemap\Url\GoogleImageUrlDecorator;
 use Presta\SitemapBundle\Sitemap\Url\UrlConcrete;
 use Selene\CMSBundle\Repository\BlogRepository;
+use Selene\CMSBundle\Repository\ImageFileRepository;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
@@ -17,13 +20,19 @@ class SitemapSubscriber implements EventSubscriberInterface
     private $blogRepository;
 
     /**
+     * @var ImageRepository
+     */
+    private $imageRepository;
+
+    /**
      * @var UrlGeneratorInterface
      */
     private $router;
 
-    public function __construct(BlogRepository $blogRepository, UrlGeneratorInterface $router)
+    public function __construct(BlogRepository $blogRepository, ImageFileRepository $imageRepository, UrlGeneratorInterface $router)
     {
         $this->blogRepository = $blogRepository;
+        $this->imageRepository = $imageRepository;
         $this->router = $router;
     }
 
@@ -40,6 +49,21 @@ class SitemapSubscriber implements EventSubscriberInterface
     public function populate(SitemapPopulateEvent $event): void
     {
         $this->registerBlogPostsUrls($event->getUrlContainer());
+        $this->registerImageUrls($event->getUrlContainer());
+    }
+
+    public function registerImageUrls(UrlContainerInterface $urls): void
+    {
+        $images = $this->imageRepository->findAll();
+
+        $url = new UrlConcrete('/build/images/');
+        $decoratedUrl = new GoogleImageUrlDecorator($url);
+
+        foreach ($images as $i) {
+            $decoratedUrl->addImage(new GoogleImage($i->getSlug()));
+        }
+
+        $urls->addUrl($decoratedUrl, 'images');
     }
 
     public function registerBlogPostsUrls(UrlContainerInterface $urls): void
@@ -58,7 +82,7 @@ class SitemapSubscriber implements EventSubscriberInterface
                         UrlGeneratorInterface::ABSOLUTE_URL
                     )
                 ),
-                'default'
+                'blog'
             );
         }
     }
