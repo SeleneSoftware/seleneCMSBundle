@@ -1,7 +1,7 @@
 {
     "name": "selenesoftware/cms-bundle",
     "type": "symfony-bundle",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "CMS platform for Symfony",
     "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
     "license": "MIT",
