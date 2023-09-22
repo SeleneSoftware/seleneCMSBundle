@@ -57,11 +57,11 @@ class SitemapSubscriber implements EventSubscriberInterface
         $images = $this->imageRepository->findAll();
 
         $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
-        $url = new UrlConcrete("{$protocol}{$_SERVER['SERVER_NAME']}/build");
+        $url = new UrlConcrete("{$protocol}{$_SERVER['SERVER_NAME']}");
         $decoratedUrl = new GoogleImageUrlDecorator($url);
 
         foreach ($images as $i) {
-            $decoratedUrl->addImage(new GoogleImage($url.$i->getImageFile()));
+            $decoratedUrl->addImage(new GoogleImage($url->getLoc().$i->getImageFile()));
         }
 
         $urls->addUrl($decoratedUrl, 'images');
