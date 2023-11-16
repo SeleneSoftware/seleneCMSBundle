@@ -35,7 +35,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private Collection $blogs;
 
     #[ORM\Column(length: 255)]
-    private ?string $name = 'Full Name';
+    private ?string $name;
 
     #[ORM\ManyToOne]
     private ?ImageFile $imageFile = null;
