@@ -34,10 +34,9 @@ class UserAdminCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
         $email = $input->getArgument('email');
+        $repo = $this->entityManager->getRepository(User::class);
 
-        if ($email) {
-            $repo = $entityManager->getRepository(User::class);
-        } else {
+        if (!$email) {
             $email = $io->ask('Email Address of user to make admin:', null, function ($email) {
                 if (!$email) {
                     throw new \RuntimeException('You must use an email address.');
