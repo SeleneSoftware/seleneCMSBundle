@@ -13,7 +13,7 @@ class SecureController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if ($this->getUser()) {
-            return $this->redirectToRoute('selene_cs_login');
+            return $this->redirectToRoute('selene_cms_blog');
         }
 
         // get the login error if there is one
