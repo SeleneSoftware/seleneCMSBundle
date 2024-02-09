@@ -22,7 +22,7 @@
         "symfony/mime": "^6.2|^6.3|^6.4|^7.0",
         "easycorp/easyadmin-bundle": "^4.4",
         "league/commonmark": "^2.3",
-        "presta/sitemap-bundle": "^3.3",
+        "presta/sitemap-bundle": "^4.0",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/orm": "^2.15",
         "symfony/orm-pack": "^2.3",
