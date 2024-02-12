@@ -27,7 +27,8 @@
         "doctrine/orm": "^2.15",
         "symfony/orm-pack": "^2.3",
         "symfonycasts/reset-password-bundle": "^1.17",
-        "symfony/ux-turbo": "^2.14"
+        "symfony/ux-turbo": "^2.14",
+        "symfony/ux-twig-component": "^2.14"
     },
     "autoload": {
         "psr-4": {
