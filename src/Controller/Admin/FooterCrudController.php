@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace Selene\CMSBundle\Controller\Admin;
 
 use App\Entity\Footer;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
