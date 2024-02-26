@@ -34,7 +34,7 @@ class AppFormAuthenticator extends AbstractLoginFormAuthenticator
         $email = $request->request->get('email', '');
 
         // Backwards compatability for 6.2 and beyond
-        if (class_exist(Security::class, false)) {
+        if (class_exists(Security::class, false)) {
             $request->getSession()->set(Security::LAST_USERNAME, $email);
         } else {
             $request->getSession()->set(SecurityRequestAttributes::LAST_USERNAME, $email);
