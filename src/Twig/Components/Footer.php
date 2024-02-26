@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Twig\Components;
+namespace Selene\CMSBundle\Twig\Components;
 
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
