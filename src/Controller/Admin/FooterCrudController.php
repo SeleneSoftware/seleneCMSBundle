@@ -4,7 +4,6 @@ namespace Selene\CMSBundle\Controller\Admin;
 
 use App\Entity\Footer;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -15,14 +14,14 @@ class FooterCrudController extends AbstractCrudController
         return Footer::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
             TextField::new('title'),
-            TextEditorField::new('description'),
+            TextEditorField::new('route'),
+            ChoiceField::new('section')->setChoices(
+                static fn (?Footer $foo): array => $foo->getSection()
+            )->autocomplete(),
         ];
     }
-    */
 }

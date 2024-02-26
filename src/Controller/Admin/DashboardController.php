@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Selene\CMSBundle\Entity\Blog;
 use Selene\CMSBundle\Entity\Comment;
 use Selene\CMSBundle\Entity\Content;
+use Selene\CMSBundle\Entity\Footer;
 use Selene\CMSBundle\Entity\ImageFile;
 use Selene\CMSBundle\Entity\Settings;
 use Selene\CMSBundle\Entity\User;
@@ -55,6 +56,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Comments', 'fas fa-list', Comment::class);
         yield MenuItem::linkToCrud('Images', 'fas fa-list', ImageFile::class);
         yield MenuItem::linkToCrud('Content', 'fas fa-list', Content::class);
+        yield MenuItem::linkToCrud('Footer', 'fas fa-list', Footer::class);
         yield MenuItem::linkToCrud('Settings', 'fas fa-list', Settings::class);
 
         yield MenuItem::linkToCrud('Users', 'fas fa-list', User::class)
