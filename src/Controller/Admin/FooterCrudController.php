@@ -2,10 +2,10 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use App\Entity\Footer;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Selene\CMSBundle\Entity\Footer;
 
 class FooterCrudController extends AbstractCrudController
 {
