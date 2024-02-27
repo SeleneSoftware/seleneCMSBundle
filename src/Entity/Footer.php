@@ -19,8 +19,8 @@ class Footer
     #[ORM\Column(length: 255)]
     private ?string $route = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $section = null;
+    #[ORM\ManyToOne(inversedBy: 'product')]
+    private ?FooterSection $footerSection = null;
 
     public function getId(): ?int
     {
@@ -47,6 +47,18 @@ class Footer
     public function setRoute(string $route): static
     {
         $this->route = $route;
+
+        return $this;
+    }
+
+    public function getFooterSection(): ?FooterSection
+    {
+        return $this->footerSection;
+    }
+
+    public function setFooterSection(?FooterSection $footerSection): static
+    {
+        $this->footerSection = $footerSection;
 
         return $this;
     }
