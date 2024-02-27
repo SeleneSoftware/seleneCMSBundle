@@ -2,8 +2,8 @@
 
 namespace Selene\CMSBundle\Entity;
 
-use App\Repository\FooterRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Selene\CMSBundle\Repository\FooterRepository;
 
 #[ORM\Entity(repositoryClass: FooterRepository::class)]
 class Footer
@@ -47,18 +47,6 @@ class Footer
     public function setRoute(string $route): static
     {
         $this->route = $route;
-
-        return $this;
-    }
-
-    public function getSection(): ?string
-    {
-        return $this->section;
-    }
-
-    public function setSection(string $section): static
-    {
-        $this->section = $section;
 
         return $this;
     }

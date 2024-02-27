@@ -20,9 +20,10 @@ class FooterCrudController extends AbstractCrudController
         return [
             TextField::new('title'),
             TextEditorField::new('route'),
-            ChoiceField::new('section')->setChoices(
-                static fn (?Footer $foo): array => $foo->getSection() ?: []
-            )->autocomplete(),
+            // ChoiceField::new('section')->setChoices(
+            //     static fn (?Footer $foo): array => $foo->getSection() ?: []
+            // )->autocomplete(),
+
         ];
     }
 }
