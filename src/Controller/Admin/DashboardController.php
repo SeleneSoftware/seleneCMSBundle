@@ -9,6 +9,7 @@ use Selene\CMSBundle\Entity\Blog;
 use Selene\CMSBundle\Entity\Comment;
 use Selene\CMSBundle\Entity\Content;
 use Selene\CMSBundle\Entity\Footer;
+use Selene\CMSBundle\Entity\FooterSection;
 use Selene\CMSBundle\Entity\ImageFile;
 use Selene\CMSBundle\Entity\Settings;
 use Selene\CMSBundle\Entity\User;
