@@ -26,6 +26,11 @@ class FooterSection
         $this->entry = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
