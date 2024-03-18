@@ -3,6 +3,7 @@
 namespace Selene\CMSBundle\Twig;
 
 use Selene\CMSBundle\Handlers\BlogImageHandler;
+use Selene\CMSBundle\Handlers\RouteHandler;
 use Selene\CMSBundle\Handlers\SettingsHandler;
 use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Twig\Extension\AbstractExtension;
@@ -11,14 +12,14 @@ use Twig\TwigFunction;
 
 class AppExtension extends AbstractExtension
 {
-    protected $settings;
-
-    protected $blogImage;
-
-    public function __construct(SettingsHandler $settings, BlogImageHandler $blogImage)
-    {
+    public function __construct(
+        protected SettingsHandler $settings,
+        protected BlogImageHandler $blogImage,
+        protected RouteHandler $router
+    ) {
         $this->settings = $settings;
         $this->blogImage = $blogImage;
+        $this->routeHandler = $router;
     }
 
     public function getFilters(): array
