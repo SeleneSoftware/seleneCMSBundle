@@ -14,7 +14,7 @@ class RouteHandler
     }
 
     // This is used to determine if a string is a full domain route or a Symfony route
-    public function getRoute(string $routeName = '#', array $routeParamaters = [])
+    public function getRoute(string $routeName = '#', array $routeParameters = [])
     {
         try {
             $url = $this->router->generate($routeName, $routeParameters);
