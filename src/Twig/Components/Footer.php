@@ -2,15 +2,15 @@
 
 namespace Selene\CMSBundle\Twig\Components;
 
-use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 use Selene\CMSBundle\Repository\FooterSectionRepository;
+use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
 // use Doctrine\Common\Collections\ArrayCollection;
 
 #[AsTwigComponent]
 final class Footer
 {
-    private array $data;
+    public array $data;
 
     public function __construct(
         private FooterSectionRepository $repo,

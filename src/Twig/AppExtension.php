@@ -37,11 +37,12 @@ class AppExtension extends AbstractExtension
         return [
             new TwigFunction('getSetting', [$this->settings, 'getSetting']),
             new TwigFunction('getBlogImage', [$this->blogImage, 'getBlogImage']),
+            new TwigFunction('route', [$this->routeHandler, 'getRoute']),
         ];
     }
 
     // public function getTokenParsers()
     // {
-        // return [new ContentParser()];
+    // return [new ContentParser()];
     // }
 }
