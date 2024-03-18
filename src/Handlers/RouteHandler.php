@@ -3,6 +3,7 @@
 namespace Selene\CMSBundle\Handlers;
 
 use Selene\CMSBundle\Twig\Filter\ContentFilter;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class RouteHandler
