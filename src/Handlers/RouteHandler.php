@@ -5,7 +5,7 @@ namespace Selene\CMSBundle\Handlers;
 use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class RouteHandlerHandler
+class RouteHandler
 {
     public function __construct(
         protected ContentFilter $filter,
