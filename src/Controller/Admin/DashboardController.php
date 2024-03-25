@@ -65,4 +65,28 @@ class DashboardController extends AbstractDashboardController
             ->setPermission('ROLE_ADMIN')
         ;
     }
+
+    public function configureUserMenu(UserInterface $user): UserMenu
+    {
+        $userMenuItems = [
+            MenuItem::linkToRoute('Profile', 'fa fa-home', 'selene_cms_profile'),
+        ];
+
+        if (class_exists(LogoutUrlGenerator::class)) {
+            $userMenuItems[] = MenuItem::section();
+            $userMenuItems[] = MenuItem::linkToLogout(t('user.sign_out', domain: 'EasyAdminBundle'), 'fa-sign-out');
+        }
+        if ($this->isGranted(Permission::EA_EXIT_IMPERSONATION)) {
+            $userMenuItems[] = MenuItem::linkToExitImpersonation(t('user.exit_impersonation', domain: 'EasyAdminBundle'), 'fa-user-lock');
+        }
+
+        $userName = method_exists($user, '__toString') ? (string) $user : $user->getUserIdentifier();
+
+        return UserMenu::new()
+            ->displayUserName()
+            ->displayUserAvatar()
+            ->setName($userName)
+            ->setAvatarUrl(null)
+            ->setMenuItems($userMenuItems);
+    }
 }

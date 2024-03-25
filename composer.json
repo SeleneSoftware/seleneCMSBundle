@@ -29,7 +29,8 @@
         "symfonycasts/reset-password-bundle": "^1.17",
         "symfony/ux-turbo": "^2.14",
         "symfony/ux-twig-component": "^2.14",
-        "symfony/ux-toggle-password": "^2.14"
+        "symfony/ux-toggle-password": "^2.14",
+        "eckinox/tinymce-bundle": "^1.1"
     },
     "autoload": {
         "psr-4": {
