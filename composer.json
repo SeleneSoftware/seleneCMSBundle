@@ -26,7 +26,7 @@
         "doctrine/doctrine-bundle": "^2.12",
         "doctrine/orm": "^3.2",
         "symfony/orm-pack": "^2.3",
-        "symfonycasts/reset-password-bundle": "^1.17",
+        "symfonycasts/reset-password-bundle": "^1.22",
         "symfony/ux-turbo": "^2.18",
         "symfony/ux-twig-component": "^2.18",
         "symfony/ux-toggle-password": "^2.18",
