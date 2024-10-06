@@ -42,6 +42,13 @@ class AppExtension extends AbstractExtension
         ];
     }
 
+    public function getGlobals(): array
+    {
+        return [
+            'recentBlogs' => array_reverse($this->getBlogList($doctrine, 6)),
+        ];
+    }
+
     // public function getTokenParsers()
     // {
     // return [new ContentParser()];
