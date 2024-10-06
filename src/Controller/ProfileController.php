@@ -3,6 +3,7 @@
 namespace Selene\CMSBundle\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
+use Selene\CMSBundle\Form\ProfileType;
 use Selene\CMSBundle\Security\AppFormAuthenticator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,7 +19,7 @@ class ProfileController extends AbstractController
     public function profile(UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppFormAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
         $user = $this->getUser();
-        $form = $this->createForm(RegistrationFormType::class, $user);
+        $form = $this->createForm(ProfileType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
