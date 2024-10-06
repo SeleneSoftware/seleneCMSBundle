@@ -5,6 +5,7 @@ namespace Selene\CMSBundle\Twig;
 use Selene\CMSBundle\Handlers\BlogImageHandler;
 use Selene\CMSBundle\Handlers\RouteHandler;
 use Selene\CMSBundle\Handlers\SettingsHandler;
+use Selene\CMSBundle\Traits\BlogTrait;
 use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
@@ -12,6 +13,8 @@ use Twig\TwigFunction;
 
 class AppExtension extends AbstractExtension
 {
+    use BlogTrait;
+
     public function __construct(
         protected SettingsHandler $settings,
         protected BlogImageHandler $blogImage,
