@@ -8,10 +8,11 @@ use Selene\CMSBundle\Handlers\SettingsHandler;
 use Selene\CMSBundle\Traits\BlogTrait;
 use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Twig\Extension\AbstractExtension;
+use Twig\Extension\GlobalsInterface;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 
-class AppExtension extends AbstractExtension
+class AppExtension extends AbstractExtension implements GlobalsInterface
 {
     use BlogTrait;
 
