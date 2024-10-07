@@ -24,7 +24,7 @@
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^4.0",
         "doctrine/doctrine-bundle": "^2.7",
-        "doctrine/orm": "^2.15",
+        "doctrine/orm": "^2.15|^3.2",
         "symfony/orm-pack": "^2.3",
         "symfonycasts/reset-password-bundle": "^1.17",
         "symfony/ux-turbo": "^2.14",
