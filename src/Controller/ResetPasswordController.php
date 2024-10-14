@@ -34,7 +34,7 @@ class ResetPasswordController extends AbstractController
     /**
      * Display & process form to request a password reset.
      */
-    #[Route('', name: 'selene_cms_forgot_password_request')]
+    #[Route('/forgot-password', name: 'selene_cms_forgot_password_request')]
     public function request(Request $request, MailerInterface $mailer, TranslatorInterface $translator): Response
     {
         $form = $this->createForm(ResetPasswordRequestFormType::class);
