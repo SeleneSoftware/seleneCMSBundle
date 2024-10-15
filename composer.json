@@ -31,7 +31,8 @@
         "symfony/ux-twig-component": "^2.18",
         "symfony/ux-toggle-password": "^2.18",
         "eckinox/tinymce-bundle": "^1.1",
-        "symfony/expression-language": "^6.4|^7.0|^7.1"
+        "symfony/expression-language": "^6.4|^7.0|^7.1",
+        "symfony/mailer": "^6.4|^7.0|^7.1"
     },
     "autoload": {
         "psr-4": {
