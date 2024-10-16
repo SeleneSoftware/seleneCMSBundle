@@ -75,7 +75,6 @@ The wonderful thing about content and setting tags is the default setting.  You 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-When creating a new feature branch, run a ```composer update````` and a  `````npm update````` and commit those changes first.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
