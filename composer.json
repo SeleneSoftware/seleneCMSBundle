@@ -15,12 +15,11 @@
         "php": "^8.1|^8.2",
         "twig/extra-bundle": "^3.4",
         "twig/markdown-extra": "^3.4",
-        "twig/twig": "^2.12|^3.0",
-        "symfony/security-bundle": "^6.4|^7.0|^7.1",
-        "symfony/security-csrf":"^6.4|^7.0|^7.1",
-        "symfony/form": "^6.4|^7.0|^7.1",
-        "symfony/mime": "^6.3|^6.4|^7.0|^7.1",
-        "easycorp/easyadmin-bundle": "^4.4",
+        "twig/twig": "^3.11",
+        "symfony/security-bundle": "^7.0|^7.1",
+        "symfony/security-csrf":"^7.0|^7.1",
+        "symfony/form": "^7.0|^7.1",
+        "symfony/mime": "^7.0|^7.1",
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^4.0",
         "doctrine/doctrine-bundle": "^2.12",
@@ -31,8 +30,8 @@
         "symfony/ux-twig-component": "^2.18",
         "symfony/ux-toggle-password": "^2.18",
         "eckinox/tinymce-bundle": "^1.1",
-        "symfony/expression-language": "^6.4|^7.0|^7.1",
-        "symfony/mailer": "^6.4|^7.0|^7.1"
+        "symfony/expression-language": "^7.0|^7.1",
+        "symfony/mailer": "^7.0|^7.1"
     },
     "autoload": {
         "psr-4": {
