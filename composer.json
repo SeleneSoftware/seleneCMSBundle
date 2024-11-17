@@ -22,8 +22,6 @@
         "symfony/mime": "^7.0|^7.1",
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^4.0",
-        "doctrine/doctrine-bundle": "^2.12",
-        "doctrine/orm": "^3.2",
         "symfony/orm-pack": "^2.3",
         "symfonycasts/reset-password-bundle": "^1.22",
         "symfony/ux-turbo": "^2.21",
@@ -32,7 +30,12 @@
         "eckinox/tinymce-bundle": "^1.1",
         "symfony/expression-language": "^7.0|^7.1",
         "symfony/mailer": "^7.0|^7.1",
-        "respect/validation": "^2.3"
+        "respect/validation": "^2.3",
+
+                "doctrine/dbal": "^3",
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^3.3",
     },
     "autoload": {
         "psr-4": {
