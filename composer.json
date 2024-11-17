@@ -31,11 +31,11 @@
         "symfony/expression-language": "^7.0|^7.1",
         "symfony/mailer": "^7.0|^7.1",
         "respect/validation": "^2.3",
-
-                "doctrine/dbal": "^3",
+        "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.3",
+        "symfony/doctrine-bridge": "^7.0|^7.1"
     },
     "autoload": {
         "psr-4": {
