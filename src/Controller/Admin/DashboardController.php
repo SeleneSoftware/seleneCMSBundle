@@ -15,7 +15,7 @@ class DashboardController extends AbstractController
     #[Route('/admin', name: 'selene_cms_admin')]
     public function adminIndex(): Response
     {
-        return $this->render('@selene_cms_bundle/admin/dashboard.html.twig', [
+        return $this->render('@seleneCMS/admin/dashboard.html.twig', [
         ]);
     }
 
