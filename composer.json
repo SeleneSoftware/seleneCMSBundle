@@ -36,7 +36,8 @@
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.3",
         "symfony/doctrine-bridge": "^7.0|^7.1",
-        "symfony/validator":"^7.0|^7.1"
+        "symfony/validator":"^7.0|^7.1",
+        "symfonycasts/tailwind-bundle": "^0.6.1"
     },
     "autoload": {
         "psr-4": {
