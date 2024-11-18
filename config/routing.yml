@@ -1,3 +1,5 @@
-# blog:
-#   path: /blog
-#   controller: Selene\CMSBundle\BlogController::index
+# src/BundleName/config/routes/bundle_routes.yaml
+controllers:
+    resource: '../src/Controller/'
+    type: annotation
+
