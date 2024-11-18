@@ -2,18 +2,18 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Selene\CMSBundle\Entity\FooterSection;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class FooterSectionCrudController extends AbstractCrudController
+class FooterSectionCrudController extends AbstractController
 {
-    public static function getEntityFqcn(): string
-    {
-        return FooterSection::class;
-    }
+    // public static function getEntityFqcn(): string
+    // {
+    //     return FooterSection::class;
+    // }
 
     /*
     public function configureFields(string $pageName): iterable
