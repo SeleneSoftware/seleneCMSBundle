@@ -2,9 +2,15 @@
 
 namespace Selene\CMSBundle\Controller\Admin;
 
+use Selene\CMSBundle\Entity\Blog;
+use Selene\CMSBundle\Entity\Comment;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
 use function Symfony\Component\Translation\t;
 
-class DashboardController extends AbstractDashboardController
+class DashboardController extends AbstractController
 {
     #[Route('/admin', name: 'selene_cms_admin')]
     public function adminIndex(): Response
