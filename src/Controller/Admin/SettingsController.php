@@ -4,7 +4,7 @@ namespace Selene\CMSBundle\Controller\Admin;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class SettingsCrudController extends AbstractController
+class SettingsController extends AbstractController
 {
     #[Route('/admin/settings', name: 'selene_cms_settings')]
     public function adminIndex(): Response
