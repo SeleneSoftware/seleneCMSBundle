@@ -45,29 +45,29 @@
 
                                 <ul class="mt-2 space-y-1 px-4">
                                     {% for item, uri in category %}
-                                    <li>
-                                        <a
-                                            href="{{ path(uri)|default(uri) }}"
-                                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                                            >
-                                            {{ item }}
-                                        </a>
-                                    </li>
-                    {% endfor %}
+                                        <li>
+                                            <a
+                                                    href="{{ path(uri)|default(uri) }}"
+                                                    class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                                    >
+                                                    {{ item }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </details>
                         </li>
-                {% else %}
-                    <li>
-                        <a
-                                href="{{ path(category) }}"
-                                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-                                >
-                                {{ title }}
-                        </a>
-                    </li>
-                {% endif %}
-{% endfor %}
+                    {% else %}
+                        <li>
+                            <a
+                                    href="{{ path(category) }}"
+                                    class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                                    >
+                                    {{ title }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
 
