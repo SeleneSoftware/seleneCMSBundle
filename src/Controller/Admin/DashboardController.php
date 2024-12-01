@@ -9,16 +9,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class DashboardController extends AbstractController
 {
     protected $sidebar = [
-        'base' => [
-            'Home' => 'selene_cms_admin',
-        ],
         'site' => [
             'Settings' => 'selene_cms_settings',
-            'Content' => '',
-            'Images' => '',
+            'Content' => 'selene_cms_settings',
+            'Images' => 'selene_cms_settings',
         ],
-        'Blog' => '',
+        'Blog' => 'selene_cms_admin',
         'Account' => [],
+        'View Site' => 'app_default',
     ];
 
     protected function addSidebarItem(string $category, string $item, string $path)
@@ -36,6 +34,13 @@ class DashboardController extends AbstractController
     {
         return $this->render('@seleneCMS/admin/dashboard.html.twig', [
             'sidebar' => $this->sidebar,
+        ]);
+    }
+
+    #[Route('/admin/settings', name: 'selene_cms_settings')]
+    public function adminSettingsIndex(): Response
+    {
+        return $this->render('@seleneCMS/admin/settings.html.twig', [
         ]);
     }
 }
