@@ -17,8 +17,8 @@ services:
         # tags: ['doctrine.repository_service']
         public: true
 
-    Selene\CMSBundle\DependencyInjection\Compiler\SidebarCompilerPass:
-        tags: ['seleneCMS.sidebar']
-    seleneCMS.sidebar_service_collector:
-        class: SeleneCMS\Service\SidebarCollector
+    # Selene\CMSBundle\DependencyInjection\Compiler\SidebarCompilerPass:
+    #     tags: ['seleneCMS.sidebar']
+    # seleneCMS.sidebar_service_collector:
+    #     class: SeleneCMS\Service\SidebarCollector
 
