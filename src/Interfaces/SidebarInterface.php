@@ -1,7 +1,10 @@
 <?php
 
-namespace Selene\CMSBundle\Service;
+namespace Selene\CMSBundle\Interfaces;
 
+use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+
+#[AutoconfigureTag('selene.sidebar')]
 interface SidebarInterface
 {
     public const default_list = [

@@ -10,9 +10,10 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
-    // protected function build(ContainerBuilder $container)
-    // {
-    //     parent::build($container);
-    //     $container->addCompilerPass(new CustomTagCompilerPass());
-    // }
+    protected function build(ContainerBuilder $container): void
+    {
+        $container->registerForAutoconfiguration(CustomInterface::class)
+            ->addTag('selene.sidebar')
+        ;
+    }
 }
