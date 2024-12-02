@@ -21,4 +21,7 @@ services:
     #     tags: ['seleneCMS.sidebar']
     # seleneCMS.sidebar_service_collector:
     #     class: SeleneCMS\Service\SidebarCollector
-
+    _instanceof:
+        # services whose classes are instances of CustomInterface will be tagged automatically
+        Selene\CMSBundle\Service\SidebarInterface:
+            tags: ['seleneCMS.sidebar']
