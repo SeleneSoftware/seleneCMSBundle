@@ -21,6 +21,6 @@ services:
     #     tags: ['seleneCMS.sidebar']
     # seleneCMS.sidebar_service_collector:
     #     class: SeleneCMS\Service\SidebarCollector
-    Selene\CMSBundle\Interface\:
+    Selene\CMSBundle\Interfaces\:
         resource: '../src/Interfaces/*'
           # tags: ['seleneCMS.sidebar']

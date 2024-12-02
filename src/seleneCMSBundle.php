@@ -2,6 +2,7 @@
 
 namespace Selene\CMSBundle;
 
+use Selene\CMSBundle\Interfaces\SidebarInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
@@ -17,7 +18,7 @@ class seleneCMSBundle extends AbstractBundle
 
     public function load(array $configs, ContainerBuilder $container): void
     {
-        $container->registerForAutoconfiguration(CustomInterface::class)
+        $container->registerForAutoconfiguration(SidebarInterface::class)
             ->addTag('selene.sidebar')
         ;
     }
