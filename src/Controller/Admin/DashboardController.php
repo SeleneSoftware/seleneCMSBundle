@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DashboardController extends AbstractController
 {
     protected $sidebar = [
-        'site' => [
+        'Site' => [
             'Settings' => 'selene_cms_settings',
             'Content' => 'selene_cms_settings',
             'Images' => 'selene_cms_settings',
