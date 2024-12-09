@@ -1,4 +1,3 @@
-{% set sb = sidebar() %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -68,7 +67,7 @@
                                     </a>
                                 </li>
 
-                                {% for title, category  in sidebar %}
+                                {% for title, category  in sidebar() %}
                                     {% if category is iterable %}
                                         <li>
                                             <details class="group [&_summary::-webkit-details-marker]:hidden">
