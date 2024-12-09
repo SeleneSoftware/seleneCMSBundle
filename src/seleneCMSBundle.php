@@ -14,11 +14,7 @@ class seleneCMSBundle extends AbstractBundle
         //     // load an XML, PHP or Yaml file
         $containerConfigurator->import('../config/services.yml');
         $containerConfigurator->import('../config/routing.yml');
-    }
-
-    public function load(array $configs, ContainerBuilder $container): void
-    {
-        $container->registerForAutoconfiguration(SidebarInterface::class)
+        $containerConfigurator->registerForAutoconfiguration(SidebarInterface::class)
             ->addTag('selene.sidebar')
         ;
     }
