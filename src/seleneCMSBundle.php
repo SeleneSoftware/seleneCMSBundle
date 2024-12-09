@@ -2,6 +2,7 @@
 
 namespace Selene\CMSBundle;
 
+use Selene\CMSBundle\DependencyInjection\Compiler\SidebarCompilerPass;
 use Selene\CMSBundle\Interfaces\SidebarInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -9,13 +10,21 @@ use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 class seleneCMSBundle extends AbstractBundle
 {
+    public function build(ContainerBuilder $container): void
+    {
+        parent::build($container);
+
+        $container->addCompilerPass(new SidebarCompilerPass());
+    }
+
     public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
     {
         //     // load an XML, PHP or Yaml file
         $containerConfigurator->import('../config/services.yml');
         $containerConfigurator->import('../config/routing.yml');
-        $containerConfigurator->registerForAutoconfiguration(SidebarInterface::class)
-            ->addTag('selene.sidebar')
-        ;
+        // $containerConfigurator->registerForAutoconfiguration(SidebarInterface::class)
+        //     ->addTag('selene.sidebar')
+        // ;
+        // $containerBuilder->addCompilerPass(new SidebarCompilerPass());
     }
 }

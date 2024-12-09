@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Selene\CMSBundle\Handlers\BlogImageHandler;
 use Selene\CMSBundle\Handlers\RouteHandler;
 use Selene\CMSBundle\Handlers\SettingsHandler;
+use Selene\CMSBundle\Sidebar\SidebarHandler;
 use Selene\CMSBundle\Traits\BlogTrait;
 use Selene\CMSBundle\Twig\Filter\ContentFilter;
 use Twig\Extension\AbstractExtension;
@@ -21,12 +22,14 @@ class AppExtension extends AbstractExtension implements GlobalsInterface
         protected SettingsHandler $settings,
         protected BlogImageHandler $blogImage,
         protected RouteHandler $router,
-        protected EntityManagerInterface $doctrine
+        protected EntityManagerInterface $doctrine,
+        protected SidebarHandler $sidebarHandler
     ) {
         $this->settings = $settings;
         $this->blogImage = $blogImage;
         $this->routeHandler = $router;
         $this->doctrine = $doctrine;
+        $this->sidebarHandler = $sidebarHandler;
     }
 
     public function getFilters(): array
@@ -46,6 +49,7 @@ class AppExtension extends AbstractExtension implements GlobalsInterface
             new TwigFunction('getSetting', [$this->settings, 'getSetting']),
             new TwigFunction('getBlogImage', [$this->blogImage, 'getBlogImage']),
             new TwigFunction('route', [$this->routeHandler, 'getRoute']),
+            new TwigFunction('sidebar', [$this->sidebarHandler, 'getSidebarArray']),
         ];
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DependencyInjection\Compiler;
+namespace Selene\CMSBundle\DependencyInjection\Compiler;
 
 use App\Mail\TransportChain;
 use Selene\CMSBundle\Sidebar\SidebarTransportChain;

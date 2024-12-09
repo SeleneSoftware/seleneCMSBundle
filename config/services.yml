@@ -24,9 +24,9 @@ services:
     Selene\CMSBundle\Interfaces\:
         resource: '../src/Interfaces/*'
           # tags: ['seleneCMS.sidebar']
-    _instanceof:
-        # services whose classes are instances of CustomInterface will be tagged automatically
-        SeleneCMS\Service\SidebarCollector:
-          tags: ['seleneCMS.sidebar']
+    # _instanceof:
+    #     # services whose classes are instances of CustomInterface will be tagged automatically
+    #     SeleneCMS\Service\SidebarCollector:
+    #       tags: ['seleneCMS.sidebar']
 
     Selene\CMSBundle\Sidebar\SidebarTransportChain: ~
