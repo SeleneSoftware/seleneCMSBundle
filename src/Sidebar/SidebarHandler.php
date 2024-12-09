@@ -9,13 +9,18 @@ class SidebarHandler
     public function __construct(
         // the attribute must be applied directly to the argument to autowire
         #[AutowireIterator('selene.sidebar')]
-        iterable $sidebar
+        protected iterable $sidebar
     ) {
-        dd($sidebar);
     }
 
     public function getSidebarArray(): array
     {
-        return [];
+        $sidebarList = [];
+        foreach ($this->sidebar as $s) {
+            $sidebarList = array_merge($sidebarList, $s->getList());
+        }
+        dd($sidebarList);
+
+        return $sidebarList;
     }
 }
