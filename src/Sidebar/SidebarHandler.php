@@ -11,7 +11,7 @@ class SidebarHandler
         #[AutowireIterator('selene.sidebar')]
         iterable $sidebar
     ) {
-        dd($handler);
+        dd($sidebar);
     }
 
     public function getSidebarArray(): array
