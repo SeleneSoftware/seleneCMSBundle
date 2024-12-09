@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 #[AutoconfigureTag('selene.sidebar')]
 interface SidebarInterface
 {
-    public const default_list = [
+    public const DEFAULTLIST = [
         'Site' => [
             'Settings' => 'selene_cms_settings',
             'Content' => 'selene_cms_settings',

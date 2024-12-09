@@ -16,7 +16,7 @@ class SidebarHandler
 
     public function getSidebarArray(): array
     {
-        $sidebarList = SidebarInterface::deafult_list;
+        $sidebarList = SidebarInterface::DEFAULTLIST;
         foreach ($this->sidebar as $s) {
             $sidebarList = array_merge($sidebarList, $s->getList());
         }
