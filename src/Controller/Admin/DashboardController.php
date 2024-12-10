@@ -33,7 +33,7 @@ class DashboardController extends AbstractController
     public function adminIndex(): Response
     {
         return $this->render('@seleneCMS/admin/dashboard.html.twig', [
-            // 'sidebar' => $this->sidebar,
+            'sidebar' => $this->sidebar,
         ]);
     }
 

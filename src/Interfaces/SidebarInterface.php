@@ -14,7 +14,8 @@ interface SidebarInterface
             'Images' => 'selene_cms_settings',
         ],
         'Blog' => 'selene_cms_admin',
-        'Account' => [],
+        'Account' => [
+        ],
         'View Site' => 'app_default',
     ];
 
