@@ -16,7 +16,7 @@ class SidebarDefault implements SidebarInterface
                 ->addItem(new Elements\SidebarItem('Settings', 'selene_cms_settings'))
                 ->addItem(new Elements\SidebarItem('Content', 'selene_cms_settings'))
                 ->addItem(new Elements\SidebarItem('Images', 'selene_cms_settings')),
-            new Elements\SidebarItem('Blog', 'selenecms_settings'),
+            new Elements\SidebarItem('Blog', 'selene_cms_settings'),
             (new Elements\SidebarDropdown())
                 ->setName('Account'),
             new Elements\SidebarItem('View Site', 'app_default'),
