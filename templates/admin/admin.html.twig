@@ -67,14 +67,14 @@
                                     </a>
                                 </li>
 
-                                {% for title, category in sidebar() %}
-                                    {% if category is iterable %}
+                                {% for s in sidebar() %}
+                                    {% if s is instanceof(s,'Selene\\CMSBundle\\Sidebar\\Elements\\SidebarDropdown') %}
                                         <li>
                                             <details class="group [&_summary::-webkit-details-marker]:hidden">
                                                 <summary
                                                         class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                                                         >
-                                                        <span class="text-sm font-medium"> {{ title }} </span>
+                                                        <span class="text-sm font-medium"> {{ s.getNme }} </span>
 
                                                         <span class="shrink-0 transition duration-300 group-open:-rotate-180">
                                                             <svg
@@ -93,13 +93,13 @@
                                                 </summary>
 
                                                 <ul class="mt-2 space-y-1 px-4">
-                                                    {% for item, uri in category %}
+                                                    {% for item in s.getItem %}
                                                         <li>
                                                             <a
-                                                                    href="{{ path(uri)|default(uri) }}"
+                                                                    href="{{ path(item.getPath)|default(item.getPath) }}"
                                                                     class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                                                                     >
-                                                                    {{ item }}
+                                                                    {{ item.getName }}
                                                             </a>
                                                         </li>
                                                     {% endfor %}
@@ -109,10 +109,10 @@
                                     {% else %}
                                         <li>
                                             <a
-                                                    href="{{ path(category) }}"
+                                                    href="{{ path(s.getPath) }}"
                                                     class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                                                     >
-                                                    {{ title }}
+                                                    {{ s.getName }}
                                             </a>
                                         </li>
                                     {% endif %}

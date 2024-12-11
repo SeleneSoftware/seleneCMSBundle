@@ -20,7 +20,6 @@ class SidebarHandler
             $s->build();
             $sidebarList = array_merge($sidebarList, $s->getList());
         }
-        dd($sidebarList);
 
         return array_unique($sidebarList);
     }
