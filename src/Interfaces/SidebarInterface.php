@@ -19,7 +19,7 @@ interface SidebarInterface
         'View Site' => 'app_default',
     ];
 
-    public function addItem(string $category, string $name, string $path);
+    public function build();
 
     public function getList(): array;
 }

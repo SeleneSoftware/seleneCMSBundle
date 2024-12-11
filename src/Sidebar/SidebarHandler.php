@@ -16,11 +16,12 @@ class SidebarHandler
 
     public function getSidebarArray(): array
     {
-        $sidebarList = SidebarInterface::DEFAULTLIST;
+        // $sidebarList = SidebarInterface::DEFAULTLIST;
         foreach ($this->sidebar as $s) {
+            $s->build();
             $sidebarList = array_merge($sidebarList, $s->getList());
         }
-        // dd($sidebarList);
+        dd($sidebarList);
 
         return array_unique($sidebarList);
     }

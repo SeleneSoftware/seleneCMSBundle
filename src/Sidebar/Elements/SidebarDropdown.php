@@ -8,12 +8,12 @@ class SidebarDropdown
 
     protected array $items = [];
 
-    public function setName(string $name)
+    public function setName(string $name): self
     {
         $this->name = $name;
     }
 
-    public function addItem(array $item)
+    public function addItem(array $item): self
     {
         $this->items[] = $item;
     }
