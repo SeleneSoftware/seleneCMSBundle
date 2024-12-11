@@ -21,6 +21,6 @@ class SidebarHandler
             $sidebarList = array_merge($sidebarList, $s->getList());
         }
 
-        return array_unique($sidebarList);
+        return $sidebarList;
     }
 }
