@@ -5,7 +5,7 @@ namespace Selene\CMSBundle\Twig;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
-class InstanceofExtension extends AbstractExtension
+class InstanceOfExtension extends AbstractExtension
 {
     public function getFunctions(): array
     {
