@@ -2,7 +2,6 @@
 
 namespace Selene\CMSBundle\Sidebar;
 
-use Selene\CMSBundle\Interfaces\SidebarInterface;
 use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 
 class SidebarHandler
@@ -16,7 +15,7 @@ class SidebarHandler
 
     public function getSidebarArray(): array
     {
-        // $sidebarList = SidebarInterface::DEFAULTLIST;
+        $sidebarList = [];
         foreach ($this->sidebar as $s) {
             $s->build();
             $sidebarList = array_merge($sidebarList, $s->getList());
