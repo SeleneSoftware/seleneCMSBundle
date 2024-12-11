@@ -15,7 +15,7 @@ class SidebarDropdown
         return $this;
     }
 
-    public function addItem(array $item): self
+    public function addItem(SidebarItem $item): self
     {
         $this->items[] = $item;
 
