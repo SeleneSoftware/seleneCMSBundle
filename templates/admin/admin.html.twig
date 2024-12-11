@@ -68,7 +68,7 @@
                                 </li>
 
                                 {% for s in sidebar() %}
-                                    {% if s is instanceof(s,'Selene\\CMSBundle\\Sidebar\\Elements\\SidebarDropdown') %}
+                                    {% if instanceof(s,'Selene\\CMSBundle\\Sidebar\\Elements\\SidebarDropdown') %}
                                         <li>
                                             <details class="group [&_summary::-webkit-details-marker]:hidden">
                                                 <summary
