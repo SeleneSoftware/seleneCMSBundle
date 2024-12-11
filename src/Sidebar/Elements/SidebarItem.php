@@ -2,7 +2,7 @@
 
 namespace Selene\CMSBundle\Sidebar\Elements;
 
-class SitebarItem
+class SidebarItem
 {
     protected $name;
 
