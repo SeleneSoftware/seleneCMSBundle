@@ -2,7 +2,6 @@
 
 namespace Selene\CMSBundle\Sidebar;
 
-use Selene\CMSBundle\Elements;
 use Selene\CMSBundle\Interfaces\SidebarInterface;
 
 class SidebarDefault implements SidebarInterface
