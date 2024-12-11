@@ -11,11 +11,15 @@ class SidebarDropdown
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
     }
 
     public function addItem(array $item): self
     {
         $this->items[] = $item;
+
+        return $this;
     }
 
     public function getName(): string

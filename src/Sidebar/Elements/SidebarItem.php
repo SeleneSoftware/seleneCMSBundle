@@ -17,11 +17,15 @@ class SitebarItem
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
     }
 
     public function setPath(string $path): self
     {
         $this->path = $path;
+
+        return $this;
     }
 
     public function getName(): string
