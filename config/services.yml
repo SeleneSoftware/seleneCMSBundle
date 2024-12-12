@@ -17,16 +17,5 @@ services:
         # tags: ['doctrine.repository_service']
         public: true
 
-    # Selene\CMSBundle\DependencyInjection\Compiler\SidebarCompilerPass:
-    #     tags: ['seleneCMS.sidebar']
-    # seleneCMS.sidebar_service_collector:
-    #     class: SeleneCMS\Service\SidebarCollector
     Selene\CMSBundle\Interfaces\:
         resource: '../src/Interfaces/*'
-          # tags: ['seleneCMS.sidebar']
-    # _instanceof:
-    #     # services whose classes are instances of CustomInterface will be tagged automatically
-    #     SeleneCMS\Service\SidebarCollector:
-    #       tags: ['seleneCMS.sidebar']
-
-    Selene\CMSBundle\Sidebar\SidebarTransportChain: ~

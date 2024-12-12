@@ -14,7 +14,6 @@ class seleneCMSBundle extends AbstractBundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new SidebarCompilerPass());
     }
 
     public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
@@ -22,9 +21,5 @@ class seleneCMSBundle extends AbstractBundle
         //     // load an XML, PHP or Yaml file
         $containerConfigurator->import('../config/services.yml');
         $containerConfigurator->import('../config/routing.yml');
-        // $containerConfigurator->registerForAutoconfiguration(SidebarInterface::class)
-        //     ->addTag('selene.sidebar')
-        // ;
-        // $containerBuilder->addCompilerPass(new SidebarCompilerPass());
     }
 }
