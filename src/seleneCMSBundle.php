@@ -2,8 +2,6 @@
 
 namespace Selene\CMSBundle;
 
-use Selene\CMSBundle\DependencyInjection\Compiler\SidebarCompilerPass;
-use Selene\CMSBundle\Interfaces\SidebarInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
@@ -21,5 +19,10 @@ class seleneCMSBundle extends AbstractBundle
         //     // load an XML, PHP or Yaml file
         $containerConfigurator->import('../config/services.yml');
         $containerConfigurator->import('../config/routing.yml');
+    }
+
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
     }
 }
