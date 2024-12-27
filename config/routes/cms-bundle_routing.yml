@@ -1,6 +1,0 @@
-# src/BundleName/config/routes/bundle_routes.yaml
-controllers:
-    resource:
-        path: ../../src/Controller/
-        namespace: Selene\CMSBundle\Controller
-    type: attribute
