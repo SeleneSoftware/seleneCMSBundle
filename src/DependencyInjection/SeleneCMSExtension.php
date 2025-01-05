@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\ExampleBundle\DependencyInjection;
+namespace Selene\CMSBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,5 +19,21 @@ class SeleneCMSExtension implements ExtensionInterface
     {
         // Return the alias name
         return 'selenecms';
+    }
+
+    /**
+     * @return string|false
+     */
+    public function getXsdValidationBasePath()
+    {
+        return false;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNamespace()
+    {
+        return 'http://example.org/schema/dic/'.$this->getAlias();
     }
 }
