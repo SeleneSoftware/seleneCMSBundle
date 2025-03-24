@@ -23,7 +23,6 @@
         "league/commonmark": "^2.3",
         "presta/sitemap-bundle": "^4.1",
         "symfony/orm-pack": "^2.3",
-        "symfonycasts/reset-password-bundle": "^1.22",
         "symfony/ux-turbo": "^2.21",
         "symfony/ux-twig-component": "^2.21",
         "symfony/ux-toggle-password": "^2.21",
