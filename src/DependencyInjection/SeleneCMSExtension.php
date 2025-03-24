@@ -11,8 +11,8 @@ class SeleneCMSExtension implements ExtensionInterface
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('routes.yaml');
+        // $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        // $loader->load('routes.yaml');
     }
 
     public function getAlias(): string

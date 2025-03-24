@@ -25,21 +25,9 @@ class seleneCMSBundle extends AbstractBundle
 
         return $this->extension;
     }
-    // public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
-    // {
-    //     //     // load an XML, PHP or Yaml file
-    //     $containerConfigurator->import('../config/services.yml');
-    //     $containerConfigurator->import('../config/routing.yml');
-    // }
 
     public function getPath(): string
     {
         return \dirname(__DIR__);
     }
-
-    // public function getAlias(): string
-    // {
-    //     // Return the alias name
-    //     return 'selenecms';
-    // }
 }
