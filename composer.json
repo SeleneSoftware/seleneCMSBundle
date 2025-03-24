@@ -21,7 +21,7 @@
         "symfony/form": "^7.0|^7.1",
         "symfony/mime": "^7.0|^7.1",
         "league/commonmark": "^2.3",
-        "presta/sitemap-bundle": "^4.0",
+        "presta/sitemap-bundle": "^4.1",
         "symfony/orm-pack": "^2.3",
         "symfonycasts/reset-password-bundle": "^1.22",
         "symfony/ux-turbo": "^2.21",
